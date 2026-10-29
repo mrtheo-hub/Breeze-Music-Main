@@ -2,8 +2,27 @@ import { mkdtemp, readdir, readFile, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { DEFAULT_SETTINGS, type LocalPlaylist, type Track } from '@breeze/core';
-import { beforeEach, describe, expect, it } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { JsonFileStorage } from '../src/main/storage';
+
+const fault = vi.hoisted(() => ({
+  read: [] as Error[],
+  rename: null as Error | null,
+}));
+vi.mock('node:fs/promises', async (orig) => {
+  const real = await orig<typeof import('node:fs/promises')>();
+  return {
+    ...real,
+    readFile: ((...a: Parameters<typeof real.readFile>) => {
+      const e = fault.read.shift();
+      return e ? Promise.reject(e) : real.readFile(...a);
+    }) as typeof real.readFile,
+    rename: ((...a: Parameters<typeof real.rename>) =>
+      fault.rename ? Promise.reject(fault.rename) : real.rename(...a)) as typeof real.rename,
+  };
+});
+
+const codeErr = (code: string) => Object.assign(new Error(code), { code });
 
 const t = (id: string): Track => ({ id, title: id, artists: [], thumbnails: [] });
 const pl = (id: string, createdAt: number): LocalPlaylist => ({
@@ -17,6 +36,8 @@ const pl = (id: string, createdAt: number): LocalPlaylist => ({
 let dir: string;
 beforeEach(async () => {
   dir = await mkdtemp(join(tmpdir(), 'breeze-'));
+  fault.read = [];
+  fault.rename = null;
 });
 
 describe('JsonFileStorage', () => {
@@ -72,5 +93,24 @@ describe('JsonFileStorage', () => {
     const [first] = await s.getHistory(1);
     if (first) first.title = 'changed';
     expect((await s.getHistory(1))[0]?.title).toBe('x');
+  });
+
+  it('rejects, not defaults, when the file is unreadable, and retries later', async () => {
+    const file = join(dir, 'library.json');
+    const original = JSON.stringify({ settings: { theme: 'light' } });
+    await writeFile(file, original);
+    fault.read = [codeErr('EBUSY')];
+    const s = new JsonFileStorage(dir);
+    await expect(s.getSettings()).rejects.toThrow('EBUSY');
+    expect(await readFile(file, 'utf8')).toBe(original);
+    expect((await s.getSettings()).theme).toBe('light');
+  });
+
+  it('rejects and keeps the corrupt file when its backup rename fails', async () => {
+    const file = join(dir, 'library.json');
+    await writeFile(file, '{ not json');
+    fault.rename = codeErr('EPERM');
+    await expect(new JsonFileStorage(dir).getSettings()).rejects.toThrow('EPERM');
+    expect(await readFile(file, 'utf8')).toBe('{ not json');
   });
 });

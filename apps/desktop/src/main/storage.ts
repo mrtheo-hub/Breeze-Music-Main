@@ -76,7 +76,14 @@ export class JsonFileStorage implements Storage {
   }
 
   private load(): Promise<Library> {
-    this.library ??= this.read();
+    if (!this.library) {
+      const pending = this.read();
+      this.library = pending;
+      // Do not cache a failed read: the next call retries.
+      pending.catch(() => {
+        if (this.library === pending) this.library = null;
+      });
+    }
     return this.library;
   }
 
@@ -84,14 +91,17 @@ export class JsonFileStorage implements Storage {
     let raw: string;
     try {
       raw = await readFile(this.file, 'utf8');
-    } catch {
-      return normalize({}); // first run: no file yet
+    } catch (e) {
+      // Only a missing file is a first run; a locked/unreadable one must not become empty defaults.
+      if ((e as NodeJS.ErrnoException).code === 'ENOENT') return normalize({});
+      throw e;
     }
     try {
       return normalize(JSON.parse(raw));
     } catch {
       // Keep the unreadable file for recovery instead of overwriting it on the next save.
-      await rename(this.file, join(this.dir, `library.corrupt-${Date.now()}.json`)).catch(() => undefined);
+      // If the backup fails, throw: carrying on would let the next save overwrite the original.
+      await rename(this.file, join(this.dir, `library.corrupt-${Date.now()}.json`));
       return normalize({});
     }
   }
