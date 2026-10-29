@@ -57,6 +57,11 @@ describe('fetchLyrics', () => {
     expect(await fetchLyrics(query, fetcher)).toEqual({ synced: null, plain: null });
   });
 
+  it('treats a 400 (LRCLIB rejects the query) as no lyrics', async () => {
+    const { fetcher } = fakeFetch({ '/api/get': { status: 400 }, '/api/search': { status: 400 } });
+    expect(await fetchLyrics({ ...query, artist: '' }, fetcher)).toEqual({ synced: null, plain: null });
+  });
+
   it('throws SourceError network on a 5xx', async () => {
     const { fetcher } = fakeFetch({ '/api/get': { status: 503 } });
     await expect(fetchLyrics(query, fetcher)).rejects.toMatchObject({ kind: 'network' });

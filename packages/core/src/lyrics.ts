@@ -44,7 +44,8 @@ async function getJson<T>(fetcher: Fetcher, url: string): Promise<T | null> {
   } catch (e) {
     throw new SourceError('network', 'Lyrics request failed', { cause: e });
   }
-  if (res.status === 404) return null;
+  // 400 means LRCLIB rejected the query (e.g. empty artist): same as no match.
+  if (res.status === 404 || res.status === 400) return null;
   if (!res.ok) throw new SourceError('network', `Lyrics request failed with status ${res.status}`);
   try {
     return (await res.json()) as T;
