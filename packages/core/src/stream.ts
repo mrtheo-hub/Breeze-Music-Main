@@ -48,8 +48,16 @@ let evaluatorInstalled = false;
  */
 export function installVmEvaluator(): void {
   if (evaluatorInstalled) return;
-  Platform.shim.eval = (data: { output: string }, env: Record<string, unknown>) =>
-    vm.runInNewContext(`(function(){${data.output}})()`, { ...env }, { timeout: 2000 });
+  Platform.shim.eval = (data: { output: string }, env: Record<string, unknown>) => {
+    for (const [k, v] of Object.entries(env)) {
+      if (v !== null && (typeof v === 'object' || typeof v === 'function')) {
+        throw new Error(`vm evaluator env value "${k}" must be a primitive`);
+      }
+    }
+    // Null-prototype sandbox: a host-realm object would let code reach the host Function via constructor.constructor.
+    const sandbox = vm.createContext(Object.assign(Object.create(null), env));
+    return vm.runInContext(`(function(){'use strict';${data.output}})()`, sandbox, { timeout: 2000 });
+  };
   evaluatorInstalled = true;
 }
 
@@ -68,7 +76,7 @@ export class StreamResolver {
     });
   }
 
-  /** Try the YouTube Music client, then IOS. Spiked 2026-10-29: both give audio/mp4 that plays. */
+  /** Try the YouTube Music client, then IOS. Spiked 2026-10-29: both return playable audio (mp4/AAC or webm/opus; Chromium plays both). */
   resolve(id: string, quality: AudioQuality = 'high'): Promise<StreamInfo> {
     return guard(async () => {
       let lastError: unknown = new SourceError('not_found', `No playable audio for ${id}`);

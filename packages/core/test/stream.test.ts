@@ -55,6 +55,26 @@ describe('installVmEvaluator', () => {
     expect(await run('return typeof require')).toBe('undefined');
     expect(await run('return n + 1', { n: 41 })).toBe(42);
   });
+
+  it('does not let player code climb to the host process', async () => {
+    installVmEvaluator();
+    const run = (output: string) => Platform.shim.eval({ output } as never, {} as never);
+    expect(
+      await run(
+        'try { return typeof this.constructor.constructor("return process")() } catch (e) { return "blocked" }',
+      ),
+    ).not.toBe('object');
+    expect(
+      await run(
+        'try { return globalThis.constructor.constructor("return typeof process")() } catch (e) { return "blocked" }',
+      ),
+    ).not.toBe('object');
+  });
+
+  it('rejects non-primitive env values', () => {
+    installVmEvaluator();
+    expect(() => Platform.shim.eval({ output: 'return 1' } as never, { f: () => 1 } as never)).toThrow();
+  });
 });
 
 describe('StreamResolver.resolve', () => {
