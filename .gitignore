@@ -1,0 +1,9 @@
+node_modules/
+dist/
+out/
+release/
+.vercel/
+*.log
+.env
+.env.*
+.superpowers/
