@@ -155,7 +155,12 @@ describe('shuffle', () => {
   });
 
   it('tracks added while shuffled survive unshuffle', () => {
-    const s = toggleShuffle(enqueue(toggleShuffle(abcde(), () => 0), [t('z')]));
+    const s = toggleShuffle(
+      enqueue(
+        toggleShuffle(abcde(), () => 0),
+        [t('z')],
+      ),
+    );
     expect(ids(s.tracks)).toEqual(['a', 'b', 'c', 'd', 'e', 'z']);
   });
 

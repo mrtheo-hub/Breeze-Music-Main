@@ -107,8 +107,8 @@ Create `pnpm-workspace.yaml`:
 
 ```yaml
 packages:
-  - 'packages/*'
-  - 'apps/*'
+  - "packages/*"
+  - "apps/*"
 ```
 
 Create `package.json`:
@@ -607,7 +607,12 @@ describe('shuffle', () => {
   });
 
   it('tracks added while shuffled survive unshuffle', () => {
-    const s = toggleShuffle(enqueue(toggleShuffle(abcde(), () => 0), [t('z')]));
+    const s = toggleShuffle(
+      enqueue(
+        toggleShuffle(abcde(), () => 0),
+        [t('z')],
+      ),
+    );
     expect(ids(s.tracks)).toEqual(['a', 'b', 'c', 'd', 'e', 'z']);
   });
 
@@ -1240,9 +1245,7 @@ export const toText = (v: unknown): string => (v == null ? '' : String(v)).trim(
 export function mapThumbs(raw: Pick<RawItem, 'thumbnail' | 'thumbnails'> | undefined): Thumbnail[] {
   const t = raw?.thumbnail;
   const list = Array.isArray(t) ? t : (t?.contents ?? raw?.thumbnails ?? []);
-  return list
-    .filter((x) => Boolean(x?.url))
-    .map((x) => ({ url: x.url, width: x.width ?? 0, height: x.height ?? 0 }));
+  return list.filter((x) => Boolean(x?.url)).map((x) => ({ url: x.url, width: x.width ?? 0, height: x.height ?? 0 }));
 }
 
 export function mapTrack(raw: RawItem): Track | null {
@@ -1463,7 +1466,12 @@ describe('InnerTubeSource pages', () => {
   });
 
   it('upNext drops the seed track', async () => {
-    const getUpNext = vi.fn(async () => ({ contents: [{ video_id: 'seed', title: 'S' }, { video_id: 'n1', title: 'N' }] }));
+    const getUpNext = vi.fn(async () => ({
+      contents: [
+        { video_id: 'seed', title: 'S' },
+        { video_id: 'n1', title: 'N' },
+      ],
+    }));
     const list = await new InnerTubeSource(fakeClient({ getUpNext })).upNext('seed');
     expect(list.map((t) => t.id)).toEqual(['n1']);
   });
@@ -1565,9 +1573,7 @@ export class InnerTubeSource implements MusicSource {
         album: t.album ?? { id, name: title },
         thumbnails: t.thumbnails.length > 0 ? t.thumbnails : thumbnails,
       }));
-      const artists = h?.author?.name
-        ? [{ id: h.author.channel_id, name: h.author.name }]
-        : (tracks[0]?.artists ?? []);
+      const artists = h?.author?.name ? [{ id: h.author.channel_id, name: h.author.name }] : (tracks[0]?.artists ?? []);
       return { id, title, year: toText(h?.subtitle).match(YEAR)?.[0], artists, thumbnails, tracks };
     });
   }
@@ -1675,7 +1681,10 @@ if (!song) {
 console.log('first song:', song);
 
 console.log('track:', await src.track(song.id));
-console.log('up next:', (await src.upNext(song.id)).slice(0, 3).map((t) => t.title));
+console.log(
+  'up next:',
+  (await src.upNext(song.id)).slice(0, 3).map((t) => t.title),
+);
 
 const albumId = result.albums[0]?.id ?? song.album?.id;
 if (albumId) {
@@ -1743,7 +1752,13 @@ import { DEFAULT_SETTINGS, HISTORY_LIMIT, MemoryStorage, pushHistory } from '../
 import type { LocalPlaylist, Track } from '../src/types';
 
 const t = (id: string): Track => ({ id, title: id, artists: [], thumbnails: [] });
-const pl = (id: string, createdAt: number): LocalPlaylist => ({ id, name: id, tracks: [], createdAt, updatedAt: createdAt });
+const pl = (id: string, createdAt: number): LocalPlaylist => ({
+  id,
+  name: id,
+  tracks: [],
+  createdAt,
+  updatedAt: createdAt,
+});
 
 describe('pushHistory', () => {
   it('puts the newest first and removes the older duplicate', () => {
@@ -1937,7 +1952,7 @@ name: CI
 
 on:
   push:
-    branches: ['**']
+    branches: ["**"]
   pull_request:
 
 jobs:

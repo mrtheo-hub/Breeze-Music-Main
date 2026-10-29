@@ -130,7 +130,12 @@ describe('InnerTubeSource pages', () => {
   });
 
   it('upNext drops the seed track', async () => {
-    const getUpNext = vi.fn(async () => ({ contents: [{ video_id: 'seed', title: 'S' }, { video_id: 'n1', title: 'N' }] }));
+    const getUpNext = vi.fn(async () => ({
+      contents: [
+        { video_id: 'seed', title: 'S' },
+        { video_id: 'n1', title: 'N' },
+      ],
+    }));
     const list = await new InnerTubeSource(fakeClient({ getUpNext })).upNext('seed');
     expect(list.map((t) => t.id)).toEqual(['n1']);
   });

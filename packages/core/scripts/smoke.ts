@@ -5,11 +5,7 @@ import { fetchLyrics } from '../src/lyrics';
 const src = await InnerTubeSource.create();
 
 const home = await src.home();
-console.log(
-  'home sections:',
-  home.length,
-  home.map((s) => `${s.title} (${s.items.length})`).slice(0, 5),
-);
+console.log('home sections:', home.length, home.map((s) => `${s.title} (${s.items.length})`).slice(0, 5));
 
 const result = await src.search('daft punk get lucky');
 console.log('search:', {

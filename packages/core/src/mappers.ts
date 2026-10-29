@@ -27,9 +27,7 @@ export const toText = (v: unknown): string => (v == null ? '' : String(v)).trim(
 export function mapThumbs(raw: Pick<RawItem, 'thumbnail' | 'thumbnails'> | undefined): Thumbnail[] {
   const t = raw?.thumbnail;
   const list = Array.isArray(t) ? t : (t?.contents ?? raw?.thumbnails ?? []);
-  return list
-    .filter((x) => Boolean(x?.url))
-    .map((x) => ({ url: x.url, width: x.width ?? 0, height: x.height ?? 0 }));
+  return list.filter((x) => Boolean(x?.url)).map((x) => ({ url: x.url, width: x.width ?? 0, height: x.height ?? 0 }));
 }
 
 export function mapTrack(raw: RawItem): Track | null {

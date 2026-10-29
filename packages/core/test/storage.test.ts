@@ -3,7 +3,13 @@ import { DEFAULT_SETTINGS, HISTORY_LIMIT, MemoryStorage, pushHistory } from '../
 import type { LocalPlaylist, Track } from '../src/types';
 
 const t = (id: string): Track => ({ id, title: id, artists: [], thumbnails: [] });
-const pl = (id: string, createdAt: number): LocalPlaylist => ({ id, name: id, tracks: [], createdAt, updatedAt: createdAt });
+const pl = (id: string, createdAt: number): LocalPlaylist => ({
+  id,
+  name: id,
+  tracks: [],
+  createdAt,
+  updatedAt: createdAt,
+});
 
 describe('pushHistory', () => {
   it('puts the newest first and removes the older duplicate', () => {

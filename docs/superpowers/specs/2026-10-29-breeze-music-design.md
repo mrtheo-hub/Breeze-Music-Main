@@ -88,7 +88,7 @@ export interface MusicSource {
   album(id: string): Promise<Album>;
   artist(id: string): Promise<Artist>;
   playlist(id: string): Promise<Playlist>;
-  upNext(trackId: string): Promise<Track[]>;   // radio / autoplay
+  upNext(trackId: string): Promise<Track[]>; // radio / autoplay
 }
 
 // packages/ui/src/player/engine.ts
@@ -97,7 +97,7 @@ export interface AudioEngine {
   play(): void;
   pause(): void;
   seek(seconds: number): void;
-  setVolume(v: number): void;            // 0..1
+  setVolume(v: number): void; // 0..1
   on(event: 'time' | 'ended' | 'error' | 'state', cb: (payload: unknown) => void): () => void;
 }
 
@@ -115,11 +115,11 @@ export interface Storage {
 
 `packages/ui` depends only on these three interfaces. Each app supplies adapters:
 
-| Interface   | Desktop adapter                                       | Web adapter                                   |
-|-------------|-------------------------------------------------------|-----------------------------------------------|
-| MusicSource | IPC to `innertube.ts` in Electron main                | `fetch('/api/...')` to Vercel functions       |
-| AudioEngine | HTML `<audio>` with stream URL resolved in main       | YouTube IFrame Player API (hidden iframe)     |
-| Storage     | JSON files in `app.getPath('userData')` via IPC        | IndexedDB (via `idb-keyval`)                  |
+| Interface   | Desktop adapter                                 | Web adapter                               |
+| ----------- | ----------------------------------------------- | ----------------------------------------- |
+| MusicSource | IPC to `innertube.ts` in Electron main          | `fetch('/api/...')` to Vercel functions   |
+| AudioEngine | HTML `<audio>` with stream URL resolved in main | YouTube IFrame Player API (hidden iframe) |
+| Storage     | JSON files in `app.getPath('userData')` via IPC | IndexedDB (via `idb-keyval`)              |
 
 Storage choice: JSON files instead of SQLite on desktop. v1 data is small
 (playlists, settings, last 500 history items), and this avoids a native module
