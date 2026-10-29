@@ -194,4 +194,26 @@ describe('HtmlAudioEngine', () => {
     expect(streams.resolve).toHaveBeenCalledTimes(2);
     expect(audio.play).toHaveBeenCalledTimes(1);
   });
+
+  it('recovers on the next play() after a re-resolve failed', async () => {
+    let n = 0;
+    const { audio, streams, engine, errors } = make(async () => {
+      n++;
+      if (n === 2) throw new Error('offline');
+      return info(`https://s/${n}`);
+    });
+    await engine.load(t('a'));
+    audio.dispatchEvent(new Event('error')); // media error -> retry whose resolve fails
+    await flush();
+    expect(errors).toHaveLength(1);
+    engine.play();
+    await flush();
+    expect(streams.resolve).toHaveBeenCalledTimes(3);
+    expect(audio.src).toBe('https://s/3');
+    expect(audio.play).toHaveBeenCalled();
+    const ended = vi.fn();
+    engine.on('ended', ended);
+    audio.dispatchEvent(new Event('ended'));
+    expect(ended).toHaveBeenCalledOnce();
+  });
 });

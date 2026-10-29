@@ -60,8 +60,9 @@ export class HtmlAudioEngine implements AudioEngine {
 
   play(): void {
     if (this.reloading) return;
-    if (this.track && this.stream && Date.now() > this.stream.expiresAt - EXPIRY_MARGIN_MS) {
-      void this.reload(this.audio.currentTime); // expired while paused
+    // No usable stream (failed re-resolve) or expired while paused: get a fresh one.
+    if (this.track && (!this.stream || Date.now() > this.stream.expiresAt - EXPIRY_MARGIN_MS)) {
+      void this.reload(this.audio.currentTime);
       return;
     }
     this.audio.play().catch((e: unknown) => {
@@ -113,7 +114,9 @@ export class HtmlAudioEngine implements AudioEngine {
       await this.setSource(track, at);
       if (this.track === track) await this.audio.play();
     } catch (e) {
-      if (this.track === track && !isAbort(e)) this.events.emit('error', e);
+      if (this.track !== track) return;
+      this.stream = null; // dead source: the next play() re-resolves
+      if (!isAbort(e)) this.events.emit('error', e);
     }
   }
 
