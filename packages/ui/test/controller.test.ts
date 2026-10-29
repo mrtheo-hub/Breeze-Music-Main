@@ -141,4 +141,40 @@ describe('PlayerController', () => {
     player.toggleShuffle();
     expect(listener).toHaveBeenCalledTimes(1);
   });
+
+  it('drops up-next results when a newer track was chosen meanwhile', async () => {
+    let resolveUpNext = (_: ReturnType<typeof t>[]) => {};
+    const upNext = vi.fn(
+      () =>
+        new Promise<ReturnType<typeof t>[]>((r) => {
+          resolveUpNext = r;
+        }),
+    );
+    const { engine, player } = setup({ source: { upNext } });
+    await player.playTracks([t('a')]);
+    engine.events.emit('ended', undefined);
+    await player.playTracks([t('z')]);
+    resolveUpNext([t('x')]);
+    await flush();
+    expect(engine.loaded).toEqual(['a', 'z']);
+    expect(player.getState().queue.tracks.map((x) => x.id)).toEqual(['z']);
+  });
+
+  it('ignores an engine error that arrives while a newer load is pending', async () => {
+    const { engine, player } = setup();
+    let release = () => {};
+    engine.gates.set(
+      'b',
+      new Promise<void>((r) => {
+        release = r;
+      }),
+    );
+    const loading = player.playTracks([t('b'), t('c')]);
+    engine.events.emit('error', new Error('late error from previous track'));
+    release();
+    await loading;
+    expect(engine.plays).toEqual(['b']);
+    expect(engine.loaded).toEqual(['b']);
+    expect(player.getState().error).toBeNull();
+  });
 });

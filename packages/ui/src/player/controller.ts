@@ -62,7 +62,10 @@ export class PlayerController {
       this.patch({ status });
     });
     deps.engine.on('ended', () => void this.advance(true));
-    deps.engine.on('error', (e) => void this.fail(e));
+    deps.engine.on('error', (e) => {
+      // During a load the load() call itself reports failure; an error now is from the previous track.
+      if (this.state.status !== 'loading') void this.fail(e);
+    });
   }
 
   readonly getState = (): PlayerState => this.state;
@@ -155,13 +158,16 @@ export class PlayerController {
     if (!auto) return;
     const seed = current(this.state.queue);
     if (seed && (this.deps.autoplay?.() ?? true)) {
+      const token = this.loadToken;
       try {
         const more = await this.deps.source.upNext(seed.id);
+        if (token !== this.loadToken) return; // the user chose something else meanwhile
         if (more.length > 0) {
           this.patch({ queue: nextInQueue(enqueue(this.state.queue, more)).state });
           return this.load();
         }
       } catch (e) {
+        if (token !== this.loadToken) return;
         this.patch({ error: messageFor(e) });
       }
     }
