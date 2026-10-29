@@ -20,6 +20,8 @@ export class FakeEngine implements AudioEngine {
   readonly seeks: number[] = [];
   readonly failIds = new Set<string>();
   readonly gates = new Map<string, Promise<void>>();
+  /** When true, play() records the call but never reports a 'playing' state. */
+  silentPlay = false;
   volume = 1;
 
   async load(track: Track): Promise<void> {
@@ -30,7 +32,7 @@ export class FakeEngine implements AudioEngine {
 
   play(): void {
     this.plays.push(this.loaded.at(-1) ?? '');
-    this.events.emit('state', 'playing');
+    if (!this.silentPlay) this.events.emit('state', 'playing');
   }
 
   pause(): void {

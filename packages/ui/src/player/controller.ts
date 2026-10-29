@@ -45,6 +45,7 @@ export class PlayerController {
   private readonly listeners = new Set<() => void>();
   private failures = 0;
   private loadToken = 0;
+  private loadInFlight = false;
   private lastVolume: number;
 
   constructor(
@@ -63,8 +64,8 @@ export class PlayerController {
     });
     deps.engine.on('ended', () => void this.advance(true));
     deps.engine.on('error', (e) => {
-      // During a load the load() call itself reports failure; an error now is from the previous track.
-      if (this.state.status !== 'loading') void this.fail(e);
+      // While engine.load() is pending, that call reports its own failure; an error now is from the previous track.
+      if (!this.loadInFlight) void this.fail(e);
     });
   }
 
@@ -182,8 +183,13 @@ export class PlayerController {
     }
     const token = ++this.loadToken;
     this.patch({ status: 'loading', position: 0, duration: track.durationSec ?? 0 });
+    this.loadInFlight = true;
     try {
-      await this.deps.engine.load(track);
+      try {
+        await this.deps.engine.load(track);
+      } finally {
+        if (token === this.loadToken) this.loadInFlight = false;
+      }
       if (token !== this.loadToken) return; // a newer click won
       this.deps.engine.play();
       this.deps.storage.addHistory(track).catch(() => undefined);

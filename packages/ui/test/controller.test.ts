@@ -177,4 +177,33 @@ describe('PlayerController', () => {
     expect(engine.loaded).toEqual(['b']);
     expect(player.getState().error).toBeNull();
   });
+
+  it('handles an engine error that arrives after load but before playing', async () => {
+    const { engine, player } = setup();
+    engine.silentPlay = true;
+    await player.playTracks([t('a'), t('b')]);
+    engine.events.emit('error', new Error('Request to https://x failed with status code 403'));
+    await flush();
+    expect(player.getState().error).toMatch(/limiting/i);
+    expect(engine.loaded).toEqual(['a', 'b']);
+  });
+
+  it('drops an up-next failure when a newer track was chosen meanwhile', async () => {
+    let rejectUpNext = (_: Error) => {};
+    const upNext = vi.fn(
+      () =>
+        new Promise<ReturnType<typeof t>[]>((_, reject) => {
+          rejectUpNext = reject;
+        }),
+    );
+    const { engine, player } = setup({ source: { upNext } });
+    await player.playTracks([t('a')]);
+    engine.events.emit('ended', undefined);
+    await player.playTracks([t('z')]);
+    rejectUpNext(new Error('fetch failed'));
+    await flush();
+    expect(player.getState().error).toBeNull();
+    expect(player.getState().status).toBe('playing');
+    expect(engine.plays).toEqual(['a', 'z']);
+  });
 });
