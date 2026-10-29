@@ -7,6 +7,7 @@
   "scripts": {
     "test": "pnpm -r test",
     "typecheck": "pnpm -r typecheck",
+    "dev:desktop": "pnpm --filter @breeze/desktop dev",
     "lint": "biome check .",
     "lint:fix": "biome check --write ."
   },
