@@ -1,0 +1,62 @@
+{
+  "basic_info": {
+    "id": "4D7u5KF7SP8",
+    "channel_id": "UCRr1xG_2WIDs18a6cIiCxeA",
+    "title": "Get Lucky (feat. Pharrell Williams and Nile Rodgers)",
+    "duration": 370,
+    "is_owner_viewing": false,
+    "thumbnail": [
+      {
+        "url": "https://yt3.googleusercontent.com/N55arCGj69gtw6thXK8JUPisxoVYiwuIEQ7I6SGlkEyNcSJ7xIWPe76Vuu1SiUqRyx5w9qvR_zV8fV3CWQ=w544-h544-l90-rj",
+        "width": 544,
+        "height": 544
+      },
+      {
+        "url": "https://yt3.googleusercontent.com/N55arCGj69gtw6thXK8JUPisxoVYiwuIEQ7I6SGlkEyNcSJ7xIWPe76Vuu1SiUqRyx5w9qvR_zV8fV3CWQ=w226-h226-l90-rj",
+        "width": 226,
+        "height": 226
+      },
+      {
+        "url": "https://yt3.googleusercontent.com/N55arCGj69gtw6thXK8JUPisxoVYiwuIEQ7I6SGlkEyNcSJ7xIWPe76Vuu1SiUqRyx5w9qvR_zV8fV3CWQ=w120-h120-l90-rj",
+        "width": 120,
+        "height": 120
+      },
+      {
+        "url": "https://yt3.googleusercontent.com/N55arCGj69gtw6thXK8JUPisxoVYiwuIEQ7I6SGlkEyNcSJ7xIWPe76Vuu1SiUqRyx5w9qvR_zV8fV3CWQ=w60-h60-l90-rj",
+        "width": 60,
+        "height": 60
+      }
+    ],
+    "allow_ratings": true,
+    "view_count": 359644895,
+    "author": "Daft Punk, Pharrell Williams, & Nile Rodgers",
+    "is_private": false,
+    "is_live": false,
+    "is_live_content": false,
+    "is_live_dvr_enabled": false,
+    "is_upcoming": false,
+    "is_crawlable": true,
+    "is_post_live_dvr": false,
+    "is_low_latency_live_stream": false,
+    "embed": null,
+    "channel": null,
+    "is_unlisted": false,
+    "is_family_safe": true,
+    "category": null,
+    "has_ypc_metadata": null,
+    "publish_date": null,
+    "upload_date": null,
+    "start_timestamp": null,
+    "end_timestamp": null,
+    "url_canonical": "https://music.youtube.com/watch?v=4D7u5KF7SP8",
+    "tags": [
+      "Daft Punk",
+      "Pharrell Williams",
+      "ファレルウィリアムス",
+      "P. Williams",
+      "Nile Rodgers",
+      "Random Access Memories",
+      "Get Lucky"
+    ]
+  }
+}

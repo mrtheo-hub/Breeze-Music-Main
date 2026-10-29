@@ -1,0 +1,667 @@
+{
+  "header": {
+    "type": "MusicResponsiveHeader",
+    "thumbnail": {
+      "type": "MusicThumbnail",
+      "contents": [
+        {
+          "url": "https://yt3.googleusercontent.com/N55arCGj69gtw6thXK8JUPisxoVYiwuIEQ7I6SGlkEyNcSJ7xIWPe76Vuu1SiUqRyx5w9qvR_zV8fV3CWQ=w544-h544-l90-rj",
+          "width": 544,
+          "height": 544
+        },
+        {
+          "url": "https://yt3.googleusercontent.com/N55arCGj69gtw6thXK8JUPisxoVYiwuIEQ7I6SGlkEyNcSJ7xIWPe76Vuu1SiUqRyx5w9qvR_zV8fV3CWQ=w226-h226-l90-rj",
+          "width": 226,
+          "height": 226
+        },
+        {
+          "url": "https://yt3.googleusercontent.com/N55arCGj69gtw6thXK8JUPisxoVYiwuIEQ7I6SGlkEyNcSJ7xIWPe76Vuu1SiUqRyx5w9qvR_zV8fV3CWQ=w120-h120-l90-rj",
+          "width": 120,
+          "height": 120
+        },
+        {
+          "url": "https://yt3.googleusercontent.com/N55arCGj69gtw6thXK8JUPisxoVYiwuIEQ7I6SGlkEyNcSJ7xIWPe76Vuu1SiUqRyx5w9qvR_zV8fV3CWQ=w60-h60-l90-rj",
+          "width": 60,
+          "height": 60
+        }
+      ]
+    },
+    "title": {
+      "text": "Random Access Memories",
+      "runs": [
+        {
+          "text": "Random Access Memories",
+          "bold": false,
+          "bracket": false,
+          "deemphasize": false,
+          "italics": false,
+          "strikethrough": false,
+          "error_underline": false,
+          "underline": false
+        }
+      ],
+      "rtl": false
+    },
+    "subtitle": {
+      "text": "Album • 2013",
+      "runs": [
+        {
+          "text": "Album",
+          "bold": false,
+          "bracket": false,
+          "deemphasize": false,
+          "italics": false,
+          "strikethrough": false,
+          "error_underline": false,
+          "underline": false
+        },
+        {
+          "text": " • ",
+          "bold": false,
+          "bracket": false,
+          "deemphasize": false,
+          "italics": false,
+          "strikethrough": false,
+          "error_underline": false,
+          "underline": false
+        },
+        {
+          "text": "2013",
+          "bold": false,
+          "bracket": false,
+          "deemphasize": false,
+          "italics": false,
+          "strikethrough": false,
+          "error_underline": false,
+          "underline": false
+        }
+      ],
+      "rtl": false
+    },
+    "strapline_text_one": {
+      "text": "Daft Punk",
+      "runs": [
+        {
+          "text": "Daft Punk",
+          "bold": false,
+          "bracket": false,
+          "deemphasize": false,
+          "italics": false,
+          "strikethrough": false,
+          "error_underline": false,
+          "underline": false
+        }
+      ],
+      "rtl": false
+    },
+    "strapline_thumbnail": {
+      "type": "MusicThumbnail",
+      "contents": [
+        {
+          "url": "https://lh3.googleusercontent.com/qLhu6Py_4_xoBsoubKQsXlhOQGqU9YU1ZRAbFusF0LlrPkXbbpu7bEh-k_ZtE4JwLgubvucAQqcK1hRk=w544-h544-p-l90-rj",
+          "width": 544,
+          "height": 544
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/qLhu6Py_4_xoBsoubKQsXlhOQGqU9YU1ZRAbFusF0LlrPkXbbpu7bEh-k_ZtE4JwLgubvucAQqcK1hRk=w226-h226-p-l90-rj",
+          "width": 226,
+          "height": 226
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/qLhu6Py_4_xoBsoubKQsXlhOQGqU9YU1ZRAbFusF0LlrPkXbbpu7bEh-k_ZtE4JwLgubvucAQqcK1hRk=w120-h120-p-l90-rj",
+          "width": 120,
+          "height": 120
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/qLhu6Py_4_xoBsoubKQsXlhOQGqU9YU1ZRAbFusF0LlrPkXbbpu7bEh-k_ZtE4JwLgubvucAQqcK1hRk=w60-h60-p-l90-rj",
+          "width": 60,
+          "height": 60
+        }
+      ]
+    },
+    "second_subtitle": {
+      "text": "13 songs • 1 hour, 14 minutes",
+      "runs": [
+        {
+          "text": "13 songs",
+          "bold": false,
+          "bracket": false,
+          "deemphasize": false,
+          "italics": false,
+          "strikethrough": false,
+          "error_underline": false,
+          "underline": false
+        },
+        {
+          "text": " • ",
+          "bold": false,
+          "bracket": false,
+          "deemphasize": false,
+          "italics": false,
+          "strikethrough": false,
+          "error_underline": false,
+          "underline": false
+        },
+        {
+          "text": "1 hour, 14 minutes",
+          "bold": false,
+          "bracket": false,
+          "deemphasize": false,
+          "italics": false,
+          "strikethrough": false,
+          "error_underline": false,
+          "underline": false
+        }
+      ],
+      "rtl": false
+    },
+    "description": {
+      "type": "MusicDescriptionShelf",
+      "description": {
+        "text": "Random Access Memories is the fourth and final studio album by the French electronic music duo Daft Punk. It was released on 17 May 2013 through Columbia Records. The album pays tribute to late 1970s and early 1980s American music, particularly from Los Angeles. This theme is reflected in the packaging and promotional campaign, which included billboards, television advertisements and a web series. Recording sessions took place from 2008 to 2012 at Henson, Conway and Capitol Studios in California, Electric Lady Studios in New York City, and Gang Recording Studio in Paris, France.\nFollowing the minimal production of their previous album, Human After All, Daft Punk recruited session musicians with the help of Chris Caswell to perform live instrumentation and limited the use of electronic instruments to drum machines, a custom-built modular synthesizer and vintage vocoders. It combines disco, progressive rock and pop, with contributions by Paul Jackson Jr., Giorgio Moroder, Chilly Gonzales, Julian Casablancas, Paul Williams, Caswell, Pharrell Williams, Nile Rodgers, Todd Edwards, Panda Bear and DJ Falcon.\n\nFrom Wikipedia (https://en.wikipedia.org/wiki/Random_...) under Creative Commons Attribution CC-BY-SA 3.0 (https://creativecommons.org/licenses/...)",
+        "runs": [
+          {
+            "text": "Random Access Memories is the fourth and final studio album by the French electronic music duo Daft Punk. It was released on 17 May 2013 through Columbia Records. The album pays tribute to late 1970s and early 1980s American music, particularly from Los Angeles. This theme is reflected in the packaging and promotional campaign, which included billboards, television advertisements and a web series. Recording sessions took place from 2008 to 2012 at Henson, Conway and Capitol Studios in California, Electric Lady Studios in New York City, and Gang Recording Studio in Paris, France.\nFollowing the minimal production of their previous album, Human After All, Daft Punk recruited session musicians with the help of Chris Caswell to perform live instrumentation and limited the use of electronic instruments to drum machines, a custom-built modular synthesizer and vintage vocoders. It combines disco, progressive rock and pop, with contributions by Paul Jackson Jr., Giorgio Moroder, Chilly Gonzales, Julian Casablancas, Paul Williams, Caswell, Pharrell Williams, Nile Rodgers, Todd Edwards, Panda Bear and DJ Falcon.\n\nFrom Wikipedia (",
+            "bold": false,
+            "bracket": false,
+            "deemphasize": false,
+            "italics": false,
+            "strikethrough": false,
+            "error_underline": false,
+            "underline": false
+          },
+          {
+            "text": "https://en.wikipedia.org/wiki/Random_...",
+            "bold": false,
+            "bracket": false,
+            "deemphasize": false,
+            "italics": false,
+            "strikethrough": false,
+            "error_underline": false,
+            "underline": false
+          },
+          {
+            "text": ") under Creative Commons Attribution CC-BY-SA 3.0 (",
+            "bold": false,
+            "bracket": false,
+            "deemphasize": false,
+            "italics": false,
+            "strikethrough": false,
+            "error_underline": false,
+            "underline": false
+          },
+          {
+            "text": "https://creativecommons.org/licenses/...",
+            "bold": false,
+            "bracket": false,
+            "deemphasize": false,
+            "italics": false,
+            "strikethrough": false,
+            "error_underline": false,
+            "underline": false
+          },
+          {
+            "text": ")",
+            "bold": false,
+            "bracket": false,
+            "deemphasize": false,
+            "italics": false,
+            "strikethrough": false,
+            "error_underline": false,
+            "underline": false
+          }
+        ],
+        "rtl": false
+      },
+      "footer": {
+        "rtl": false
+      }
+    }
+  },
+  "contents": [
+    {
+      "type": "MusicResponsiveListItem",
+      "item_type": "video",
+      "index": {
+        "text": "1",
+        "runs": [
+          {
+            "text": "1",
+            "bold": false,
+            "bracket": false,
+            "deemphasize": false,
+            "italics": false,
+            "strikethrough": false,
+            "error_underline": false,
+            "underline": false
+          }
+        ],
+        "rtl": false
+      },
+      "id": "IluRBvnYMoY",
+      "title": "Give Life Back to Music",
+      "duration": {
+        "text": "4:36",
+        "seconds": 276
+      },
+      "authors": [
+        {
+          "name": "Daft Punk",
+          "channel_id": "UCRr1xG_2WIDs18a6cIiCxeA"
+        }
+      ]
+    },
+    {
+      "type": "MusicResponsiveListItem",
+      "item_type": "video",
+      "index": {
+        "text": "2",
+        "runs": [
+          {
+            "text": "2",
+            "bold": false,
+            "bracket": false,
+            "deemphasize": false,
+            "italics": false,
+            "strikethrough": false,
+            "error_underline": false,
+            "underline": false
+          }
+        ],
+        "rtl": false
+      },
+      "id": "ajGKWk0auOc",
+      "title": "The Game of Love",
+      "duration": {
+        "text": "5:23",
+        "seconds": 323
+      },
+      "authors": [
+        {
+          "name": "Daft Punk",
+          "channel_id": "UCRr1xG_2WIDs18a6cIiCxeA"
+        }
+      ]
+    },
+    {
+      "type": "MusicResponsiveListItem",
+      "item_type": "video",
+      "index": {
+        "text": "3",
+        "runs": [
+          {
+            "text": "3",
+            "bold": false,
+            "bracket": false,
+            "deemphasize": false,
+            "italics": false,
+            "strikethrough": false,
+            "error_underline": false,
+            "underline": false
+          }
+        ],
+        "rtl": false
+      },
+      "id": "zhl-Cs1-sG4",
+      "title": "Giorgio by Moroder",
+      "duration": {
+        "text": "9:05",
+        "seconds": 545
+      },
+      "authors": [
+        {
+          "name": "Daft Punk",
+          "channel_id": "UCRr1xG_2WIDs18a6cIiCxeA"
+        }
+      ]
+    },
+    {
+      "type": "MusicResponsiveListItem",
+      "item_type": "video",
+      "index": {
+        "text": "4",
+        "runs": [
+          {
+            "text": "4",
+            "bold": false,
+            "bracket": false,
+            "deemphasize": false,
+            "italics": false,
+            "strikethrough": false,
+            "error_underline": false,
+            "underline": false
+          }
+        ],
+        "rtl": false
+      },
+      "id": "WLa3JlGANuU",
+      "title": "Within",
+      "duration": {
+        "text": "3:49",
+        "seconds": 229
+      },
+      "authors": [
+        {
+          "name": "Daft Punk",
+          "channel_id": "UCRr1xG_2WIDs18a6cIiCxeA"
+        }
+      ]
+    },
+    {
+      "type": "MusicResponsiveListItem",
+      "item_type": "video",
+      "index": {
+        "text": "5",
+        "runs": [
+          {
+            "text": "5",
+            "bold": false,
+            "bracket": false,
+            "deemphasize": false,
+            "italics": false,
+            "strikethrough": false,
+            "error_underline": false,
+            "underline": false
+          }
+        ],
+        "rtl": false
+      },
+      "id": "a5uQMwRMHcs",
+      "title": "Instant Crush (feat. Julian Casablancas)",
+      "duration": {
+        "text": "5:38",
+        "seconds": 338
+      },
+      "authors": [
+        {
+          "name": "Daft Punk",
+          "channel_id": "UCRr1xG_2WIDs18a6cIiCxeA"
+        },
+        {
+          "name": "Julian Casablancas",
+          "channel_id": "UCWhpbdGLnR8XtXLr0yl2nYA"
+        }
+      ]
+    },
+    {
+      "type": "MusicResponsiveListItem",
+      "item_type": "video",
+      "index": {
+        "text": "6",
+        "runs": [
+          {
+            "text": "6",
+            "bold": false,
+            "bracket": false,
+            "deemphasize": false,
+            "italics": false,
+            "strikethrough": false,
+            "error_underline": false,
+            "underline": false
+          }
+        ],
+        "rtl": false
+      },
+      "id": "NF-kLy44Hls",
+      "title": "Lose Yourself to Dance (feat. Pharrell Williams)",
+      "duration": {
+        "text": "5:54",
+        "seconds": 354
+      },
+      "authors": [
+        {
+          "name": "Daft Punk",
+          "channel_id": "UCRr1xG_2WIDs18a6cIiCxeA"
+        },
+        {
+          "name": "Pharrell Williams",
+          "channel_id": "UCJw8VyO6e3v6S0327AsgwcQ"
+        }
+      ]
+    },
+    {
+      "type": "MusicResponsiveListItem",
+      "item_type": "video",
+      "index": {
+        "text": "7",
+        "runs": [
+          {
+            "text": "7",
+            "bold": false,
+            "bracket": false,
+            "deemphasize": false,
+            "italics": false,
+            "strikethrough": false,
+            "error_underline": false,
+            "underline": false
+          }
+        ],
+        "rtl": false
+      },
+      "id": "0Gkhol2Q1og",
+      "title": "Touch (feat. Paul Williams)",
+      "duration": {
+        "text": "8:19",
+        "seconds": 499
+      },
+      "authors": [
+        {
+          "name": "Daft Punk",
+          "channel_id": "UCRr1xG_2WIDs18a6cIiCxeA"
+        },
+        {
+          "name": "Paul Williams",
+          "channel_id": "UCPtp29kketDMCRawl_lT2oQ"
+        }
+      ]
+    },
+    {
+      "type": "MusicResponsiveListItem",
+      "item_type": "video",
+      "index": {
+        "text": "8",
+        "runs": [
+          {
+            "text": "8",
+            "bold": false,
+            "bracket": false,
+            "deemphasize": false,
+            "italics": false,
+            "strikethrough": false,
+            "error_underline": false,
+            "underline": false
+          }
+        ],
+        "rtl": false
+      },
+      "id": "5NV6Rdv1a3I",
+      "title": "Get Lucky (feat. Pharrell Williams and Nile Rodgers)",
+      "duration": {
+        "text": "6:10",
+        "seconds": 370
+      },
+      "authors": [
+        {
+          "name": "Daft Punk",
+          "channel_id": "UCRr1xG_2WIDs18a6cIiCxeA"
+        },
+        {
+          "name": "Pharrell Williams",
+          "channel_id": "UCJw8VyO6e3v6S0327AsgwcQ"
+        },
+        {
+          "name": "Nile Rodgers",
+          "channel_id": "UCThde8ccpEr6sP8dIHZ-ceQ"
+        }
+      ]
+    },
+    {
+      "type": "MusicResponsiveListItem",
+      "item_type": "video",
+      "index": {
+        "text": "9",
+        "runs": [
+          {
+            "text": "9",
+            "bold": false,
+            "bracket": false,
+            "deemphasize": false,
+            "italics": false,
+            "strikethrough": false,
+            "error_underline": false,
+            "underline": false
+          }
+        ],
+        "rtl": false
+      },
+      "id": "3T0NqvdUiWI",
+      "title": "Beyond",
+      "duration": {
+        "text": "4:51",
+        "seconds": 291
+      },
+      "authors": [
+        {
+          "name": "Daft Punk",
+          "channel_id": "UCRr1xG_2WIDs18a6cIiCxeA"
+        }
+      ]
+    },
+    {
+      "type": "MusicResponsiveListItem",
+      "item_type": "video",
+      "index": {
+        "text": "10",
+        "runs": [
+          {
+            "text": "10",
+            "bold": false,
+            "bracket": false,
+            "deemphasize": false,
+            "italics": false,
+            "strikethrough": false,
+            "error_underline": false,
+            "underline": false
+          }
+        ],
+        "rtl": false
+      },
+      "id": "wz7YiQdNmZ8",
+      "title": "Motherboard",
+      "duration": {
+        "text": "5:42",
+        "seconds": 342
+      },
+      "authors": [
+        {
+          "name": "Daft Punk",
+          "channel_id": "UCRr1xG_2WIDs18a6cIiCxeA"
+        }
+      ]
+    },
+    {
+      "type": "MusicResponsiveListItem",
+      "item_type": "video",
+      "index": {
+        "text": "11",
+        "runs": [
+          {
+            "text": "11",
+            "bold": false,
+            "bracket": false,
+            "deemphasize": false,
+            "italics": false,
+            "strikethrough": false,
+            "error_underline": false,
+            "underline": false
+          }
+        ],
+        "rtl": false
+      },
+      "id": "_ScM9pKlCfo",
+      "title": "Fragments of Time (feat. Todd Edwards)",
+      "duration": {
+        "text": "4:40",
+        "seconds": 280
+      },
+      "authors": [
+        {
+          "name": "Daft Punk",
+          "channel_id": "UCRr1xG_2WIDs18a6cIiCxeA"
+        },
+        {
+          "name": "Todd Edwards",
+          "channel_id": "UCk_ezssvR9Os0VrMbmA3SWg"
+        }
+      ]
+    },
+    {
+      "type": "MusicResponsiveListItem",
+      "item_type": "video",
+      "index": {
+        "text": "12",
+        "runs": [
+          {
+            "text": "12",
+            "bold": false,
+            "bracket": false,
+            "deemphasize": false,
+            "italics": false,
+            "strikethrough": false,
+            "error_underline": false,
+            "underline": false
+          }
+        ],
+        "rtl": false
+      },
+      "id": "LL-gyhZVvx0",
+      "title": "Doin' it Right (feat. Panda Bear)",
+      "duration": {
+        "text": "4:12",
+        "seconds": 252
+      },
+      "authors": [
+        {
+          "name": "Daft Punk",
+          "channel_id": "UCRr1xG_2WIDs18a6cIiCxeA"
+        },
+        {
+          "name": "Panda Bear",
+          "channel_id": "UCB2qO9T8dkxOhIvZVqVkVcg"
+        }
+      ]
+    },
+    {
+      "type": "MusicResponsiveListItem",
+      "item_type": "video",
+      "index": {
+        "text": "13",
+        "runs": [
+          {
+            "text": "13",
+            "bold": false,
+            "bracket": false,
+            "deemphasize": false,
+            "italics": false,
+            "strikethrough": false,
+            "error_underline": false,
+            "underline": false
+          }
+        ],
+        "rtl": false
+      },
+      "id": "ZbbTmR6Xaag",
+      "title": "Contact",
+      "duration": {
+        "text": "6:24",
+        "seconds": 384
+      },
+      "authors": [
+        {
+          "name": "Daft Punk",
+          "channel_id": "UCRr1xG_2WIDs18a6cIiCxeA"
+        }
+      ]
+    }
+  ]
+}

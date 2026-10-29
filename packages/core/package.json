@@ -10,7 +10,8 @@
   "scripts": {
     "test": "vitest run",
     "typecheck": "tsc --noEmit -p .",
-    "smoke": "tsx scripts/smoke.ts"
+    "smoke": "tsx scripts/smoke.ts",
+    "capture": "tsx scripts/capture-fixtures.ts"
   },
   "devDependencies": {
     "@types/node": "^26.6.6",

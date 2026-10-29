@@ -1,0 +1,1607 @@
+{
+  "sections": [
+    {
+      "header": {
+        "type": "MusicCarouselShelfBasicHeader",
+        "title": {
+          "text": "Quick picks",
+          "runs": [
+            {
+              "text": "Quick picks",
+              "bold": false,
+              "bracket": false,
+              "deemphasize": false,
+              "italics": false,
+              "strikethrough": false,
+              "error_underline": false,
+              "underline": false
+            }
+          ],
+          "rtl": false
+        },
+        "more_content": {
+          "type": "Button",
+          "text": "Play all",
+          "style": "STYLE_TEXT",
+          "accessibility": {
+            "accessibility_data": {
+              "label": "Play all"
+            }
+          }
+        }
+      },
+      "contents": [
+        {
+          "type": "MusicResponsiveListItem",
+          "item_type": "song",
+          "thumbnail": {
+            "type": "MusicThumbnail",
+            "contents": [
+              {
+                "url": "https://yt3.googleusercontent.com/xrGDyYO3umAVFdsdyIM2G451xiAxCD6haJkCQel6TQlqE-XsEUCGsj_Q5Er4YjFpjWqv-_Ze-VaPPL0j=w120-h120-l90-rj",
+                "width": 120,
+                "height": 120
+              },
+              {
+                "url": "https://yt3.googleusercontent.com/xrGDyYO3umAVFdsdyIM2G451xiAxCD6haJkCQel6TQlqE-XsEUCGsj_Q5Er4YjFpjWqv-_Ze-VaPPL0j=w60-h60-l90-rj",
+                "width": 60,
+                "height": 60
+              }
+            ]
+          },
+          "id": "5F28ye50-Kc",
+          "title": "Teh Hijau",
+          "album": {
+            "id": "MPREb_RVAbNZdUasD",
+            "name": "Teh Hijau"
+          },
+          "artists": [
+            {
+              "name": "Tulus",
+              "channel_id": "UC_DHlXllTSMB8pTC38_leFg"
+            }
+          ]
+        },
+        {
+          "type": "MusicResponsiveListItem",
+          "item_type": "song",
+          "thumbnail": {
+            "type": "MusicThumbnail",
+            "contents": [
+              {
+                "url": "https://yt3.googleusercontent.com/6nSKYCjwCp1f1GfgYejDk9l-3_65Qgc-sVtfeDyuAk1tSqeuTSnN6h-Z4cBeshn16kP_JIRs9whqlvQt6A=w120-h120-l90-rj",
+                "width": 120,
+                "height": 120
+              },
+              {
+                "url": "https://yt3.googleusercontent.com/6nSKYCjwCp1f1GfgYejDk9l-3_65Qgc-sVtfeDyuAk1tSqeuTSnN6h-Z4cBeshn16kP_JIRs9whqlvQt6A=w60-h60-l90-rj",
+                "width": 60,
+                "height": 60
+              }
+            ]
+          },
+          "id": "BLhIcQMaaTI",
+          "title": "Shape of My Heart",
+          "album": {
+            "id": "MPREb_vZuWGAa0zeb",
+            "name": "Black & Blue"
+          },
+          "artists": [
+            {
+              "name": "Backstreet Boys",
+              "channel_id": "UCQsJi7L4_zXzYRN2X0Fw3Zg"
+            }
+          ]
+        },
+        {
+          "type": "MusicResponsiveListItem",
+          "item_type": "song",
+          "thumbnail": {
+            "type": "MusicThumbnail",
+            "contents": [
+              {
+                "url": "https://yt3.googleusercontent.com/lri2NMO-Z9ihGrHPLowVk0CQTGYWOCV6GvsT8uf0UybSGR1kIFxUJfZu26yJw2PzpnRk-NyXDExNa5rc=w120-h120-l90-rj",
+                "width": 120,
+                "height": 120
+              },
+              {
+                "url": "https://yt3.googleusercontent.com/lri2NMO-Z9ihGrHPLowVk0CQTGYWOCV6GvsT8uf0UybSGR1kIFxUJfZu26yJw2PzpnRk-NyXDExNa5rc=w60-h60-l90-rj",
+                "width": 60,
+                "height": 60
+              }
+            ]
+          },
+          "id": "m91LMFkmpuI",
+          "title": "Dunia Yang Nanti",
+          "album": {
+            "id": "MPREb_908d5sNFzsY",
+            "name": "iqro'"
+          },
+          "artists": [
+            {
+              "name": "Raim Laode",
+              "channel_id": "UC2ArcMzVC3E4X_hTXpQNzlg"
+            }
+          ]
+        },
+        {
+          "type": "MusicResponsiveListItem",
+          "item_type": "song",
+          "thumbnail": {
+            "type": "MusicThumbnail",
+            "contents": [
+              {
+                "url": "https://yt3.googleusercontent.com/EhJCP_-PRh3_78t1fSouQ7D3mrBszq3mmXSc1JRxawuMr8C3Gq0bKC--XP1dXp4KW8UdLX09LXba8F4=w120-h120-l90-rj",
+                "width": 120,
+                "height": 120
+              },
+              {
+                "url": "https://yt3.googleusercontent.com/EhJCP_-PRh3_78t1fSouQ7D3mrBszq3mmXSc1JRxawuMr8C3Gq0bKC--XP1dXp4KW8UdLX09LXba8F4=w60-h60-l90-rj",
+                "width": 60,
+                "height": 60
+              }
+            ]
+          },
+          "id": "D0fzGl640wE",
+          "title": "Jangan Paksa Rindu",
+          "album": {
+            "id": "MPREb_3S0VBWAygjR",
+            "name": "Jangan Paksa Rindu"
+          },
+          "artists": [
+            {
+              "name": "Ifan Seventeen",
+              "channel_id": "UCb_E36en08Yl0gB-oHWPXPg"
+            }
+          ]
+        },
+        {
+          "type": "MusicResponsiveListItem",
+          "item_type": "song",
+          "thumbnail": {
+            "type": "MusicThumbnail",
+            "contents": [
+              {
+                "url": "https://yt3.googleusercontent.com/jy82fBd4lcqM2uBziu-ShqaRC3QMVB8GXtRgbGOOM159Pzvju4yU8kTledgcnn3wIEKbRhVgoIwxFPzM=w120-h120-l90-rj",
+                "width": 120,
+                "height": 120
+              },
+              {
+                "url": "https://yt3.googleusercontent.com/jy82fBd4lcqM2uBziu-ShqaRC3QMVB8GXtRgbGOOM159Pzvju4yU8kTledgcnn3wIEKbRhVgoIwxFPzM=w60-h60-l90-rj",
+                "width": 60,
+                "height": 60
+              }
+            ]
+          },
+          "id": "GhfBo_yFTpQ",
+          "title": "Percuma",
+          "album": {
+            "id": "MPREb_10ACIP5lX52",
+            "name": "Percuma"
+          },
+          "artists": [
+            {
+              "name": "Mahalini",
+              "channel_id": "UCa1eYN7cwBQrOFQLt_K8c-Q"
+            }
+          ]
+        },
+        {
+          "type": "MusicResponsiveListItem",
+          "item_type": "song",
+          "thumbnail": {
+            "type": "MusicThumbnail",
+            "contents": [
+              {
+                "url": "https://yt3.googleusercontent.com/s5PxcX0QM_X4qV95uVhrsfj4oD7EIyRjFiOLaDp44xItYeekybof3c-I8n9jsp1FVs5i-OGdt0w_e654=w120-h120-l90-rj",
+                "width": 120,
+                "height": 120
+              },
+              {
+                "url": "https://yt3.googleusercontent.com/s5PxcX0QM_X4qV95uVhrsfj4oD7EIyRjFiOLaDp44xItYeekybof3c-I8n9jsp1FVs5i-OGdt0w_e654=w60-h60-l90-rj",
+                "width": 60,
+                "height": 60
+              }
+            ]
+          },
+          "id": "Sga7z4iOYm8",
+          "title": "Kita Lewati Berdua",
+          "album": {
+            "id": "MPREb_koNGL1VIIkP",
+            "name": "Kita Lewati Berdua"
+          },
+          "artists": [
+            {
+              "name": "Overnight",
+              "channel_id": "UCsZgq1f1IU91knmyGHIhDdg"
+            }
+          ]
+        },
+        {
+          "type": "MusicResponsiveListItem",
+          "item_type": "song",
+          "thumbnail": {
+            "type": "MusicThumbnail",
+            "contents": [
+              {
+                "url": "https://yt3.googleusercontent.com/WnS8_TSqLTP0D5Ltvu5mypx6ypsFj0dM0fSNvD8vz8K_f18nAU10bNsExXoI6t6mI-zR7ezxPYv3e7w=w120-h120-l90-rj",
+                "width": 120,
+                "height": 120
+              },
+              {
+                "url": "https://yt3.googleusercontent.com/WnS8_TSqLTP0D5Ltvu5mypx6ypsFj0dM0fSNvD8vz8K_f18nAU10bNsExXoI6t6mI-zR7ezxPYv3e7w=w60-h60-l90-rj",
+                "width": 60,
+                "height": 60
+              }
+            ]
+          },
+          "id": "UmBNAt4xMSE",
+          "title": "Sesi Potret (feat. Ari Lesmana)",
+          "album": {
+            "id": "MPREb_YAJVv4dXnXf",
+            "name": "Sesi Potret"
+          },
+          "artists": [
+            {
+              "name": "eńau",
+              "channel_id": "UCRVMNJA_ihmYQMg3aLjqMjg"
+            },
+            {
+              "name": "Ari Lesmana",
+              "channel_id": "UCW7MIe9KQsy70QIYwcDRtvw"
+            }
+          ]
+        },
+        {
+          "type": "MusicResponsiveListItem",
+          "item_type": "song",
+          "thumbnail": {
+            "type": "MusicThumbnail",
+            "contents": [
+              {
+                "url": "https://yt3.googleusercontent.com/vcPeorOAKPcojuofDMAV6ypIteCqD-s6xuiU4fMuriCQh6WC8vP4TmzrjKfT9KiywQcAmp2u1iUWybV6jw=w120-h120-l90-rj",
+                "width": 120,
+                "height": 120
+              },
+              {
+                "url": "https://yt3.googleusercontent.com/vcPeorOAKPcojuofDMAV6ypIteCqD-s6xuiU4fMuriCQh6WC8vP4TmzrjKfT9KiywQcAmp2u1iUWybV6jw=w60-h60-l90-rj",
+                "width": 60,
+                "height": 60
+              }
+            ]
+          },
+          "id": "y5finUxVU9o",
+          "title": "2001x",
+          "album": {
+            "id": "MPREb_sJ8sRjrQqnh",
+            "name": "2001x"
+          },
+          "artists": [
+            {
+              "name": "Adrian Khalif",
+              "channel_id": "UCFYKl1_rI8Yf2o-y9xozcFw"
+            }
+          ]
+        },
+        {
+          "type": "MusicResponsiveListItem",
+          "item_type": "song",
+          "thumbnail": {
+            "type": "MusicThumbnail",
+            "contents": [
+              {
+                "url": "https://yt3.googleusercontent.com/AozuFQHuzVlpr4-NtgkxRA5Q9ONXf3P91VsWrqRJbRJiVxIXfiG2tyMBv0lQ1rV-MVSoB9fwbUSMGdzX=w120-h120-l90-rj",
+                "width": 120,
+                "height": 120
+              },
+              {
+                "url": "https://yt3.googleusercontent.com/AozuFQHuzVlpr4-NtgkxRA5Q9ONXf3P91VsWrqRJbRJiVxIXfiG2tyMBv0lQ1rV-MVSoB9fwbUSMGdzX=w60-h60-l90-rj",
+                "width": 60,
+                "height": 60
+              }
+            ]
+          },
+          "id": "n5Mo9hC9d_Y",
+          "title": "Astaga Bercanda",
+          "album": {
+            "id": "MPREb_y9cxPUMzShf",
+            "name": "Astaga Bercanda"
+          },
+          "artists": [
+            {
+              "name": "Akbar Chalay",
+              "channel_id": "UCnHAGsl2PpcNqgmOwBz0hLQ"
+            },
+            {
+              "name": "Mingse",
+              "channel_id": "UChtGP9-v5hoqyj7i680w9DA"
+            }
+          ]
+        },
+        {
+          "type": "MusicResponsiveListItem",
+          "item_type": "song",
+          "thumbnail": {
+            "type": "MusicThumbnail",
+            "contents": [
+              {
+                "url": "https://yt3.googleusercontent.com/qVb_uk5JJ-FyTIoESoeL080jtUIIvjdN-aQbRtUTREMMsenXd-txpbgtYaoYi5t3G7h_GBwT79zD5ppkEA=w120-h120-l90-rj",
+                "width": 120,
+                "height": 120
+              },
+              {
+                "url": "https://yt3.googleusercontent.com/qVb_uk5JJ-FyTIoESoeL080jtUIIvjdN-aQbRtUTREMMsenXd-txpbgtYaoYi5t3G7h_GBwT79zD5ppkEA=w60-h60-l90-rj",
+                "width": 60,
+                "height": 60
+              }
+            ]
+          },
+          "id": "BLQPNaBklGA",
+          "title": "Negoro Angin",
+          "album": {
+            "id": "MPREb_Td7gsVHlRUa",
+            "name": "Negoro Angin"
+          },
+          "artists": [
+            {
+              "name": "Denny Caknan",
+              "channel_id": "UCrXRY_7SVVmc6TykwhRGUNQ"
+            }
+          ]
+        },
+        {
+          "type": "MusicResponsiveListItem",
+          "item_type": "song",
+          "thumbnail": {
+            "type": "MusicThumbnail",
+            "contents": [
+              {
+                "url": "https://yt3.googleusercontent.com/HF7T09itvCJISgJvQGeeHDKSAMSq3V6g8b7m0NL7THT1wdCupVJ9aMFqczyIo1r2h-8FQPYUoLjpMWuj=w120-h120-l90-rj",
+                "width": 120,
+                "height": 120
+              },
+              {
+                "url": "https://yt3.googleusercontent.com/HF7T09itvCJISgJvQGeeHDKSAMSq3V6g8b7m0NL7THT1wdCupVJ9aMFqczyIo1r2h-8FQPYUoLjpMWuj=w60-h60-l90-rj",
+                "width": 60,
+                "height": 60
+              }
+            ]
+          },
+          "id": "iLat8Ly2O1M",
+          "title": "Terbelah Jadi Dua",
+          "album": {
+            "id": "MPREb_MwJSobEprqY",
+            "name": "Terbelah Jadi Dua"
+          },
+          "artists": [
+            {
+              "name": "Jeyma Monica",
+              "channel_id": "UCFAoslxAx04SAVEDrJpnTlQ"
+            }
+          ]
+        },
+        {
+          "type": "MusicResponsiveListItem",
+          "item_type": "song",
+          "thumbnail": {
+            "type": "MusicThumbnail",
+            "contents": [
+              {
+                "url": "https://yt3.googleusercontent.com/W_aCDg-bIvvNHTRnFX5K_HdhNLO1Fj8nDWlYuFzo6ORxsyetTehgFk1tfgfTsm_UyKqqf2rzV8qB7QkKUg=w120-h120-l90-rj",
+                "width": 120,
+                "height": 120
+              },
+              {
+                "url": "https://yt3.googleusercontent.com/W_aCDg-bIvvNHTRnFX5K_HdhNLO1Fj8nDWlYuFzo6ORxsyetTehgFk1tfgfTsm_UyKqqf2rzV8qB7QkKUg=w60-h60-l90-rj",
+                "width": 60,
+                "height": 60
+              }
+            ]
+          },
+          "id": "pA8puuLjw4U",
+          "title": "Terbelah Jadi Dua",
+          "album": {
+            "id": "MPREb_Iz3raTNjmfq",
+            "name": "Terbelah Jadi Dua"
+          },
+          "artists": [
+            {
+              "name": "Ade Govinda",
+              "channel_id": "UC2Fo-iidAyQDzwMu4KYEJfQ"
+            },
+            {
+              "name": "Gloria Jessica",
+              "channel_id": "UC0UQepcnOwogEBXykba8qJQ"
+            }
+          ]
+        },
+        {
+          "type": "MusicResponsiveListItem",
+          "item_type": "song",
+          "thumbnail": {
+            "type": "MusicThumbnail",
+            "contents": [
+              {
+                "url": "https://yt3.googleusercontent.com/eQ8b5BbMQnN1eJwDn8kh0x9NDfjH2KwpOjo7UeW5ZogFw8J1P2NpvsHyf7iEseeu6ngpqZ79Jw8tDIk=w120-h120-l90-rj",
+                "width": 120,
+                "height": 120
+              },
+              {
+                "url": "https://yt3.googleusercontent.com/eQ8b5BbMQnN1eJwDn8kh0x9NDfjH2KwpOjo7UeW5ZogFw8J1P2NpvsHyf7iEseeu6ngpqZ79Jw8tDIk=w60-h60-l90-rj",
+                "width": 60,
+                "height": 60
+              }
+            ]
+          },
+          "id": "F2PsSZKweTc",
+          "title": "What If I Call",
+          "album": {
+            "id": "MPREb_OWoV4hlmXh2",
+            "name": "What If I Call"
+          },
+          "artists": [
+            {
+              "name": "Alex Crichton",
+              "channel_id": "UChYalW1xgYtOCjw5lcfG3Tw"
+            }
+          ]
+        },
+        {
+          "type": "MusicResponsiveListItem",
+          "item_type": "song",
+          "thumbnail": {
+            "type": "MusicThumbnail",
+            "contents": [
+              {
+                "url": "https://yt3.googleusercontent.com/5d51ZlGjNP_Gss3Z3RKP7B98ASQ7pxvp4XI3IAQ3kniFFjgLPDPnR6_K3tYZGoMVvfJYXBtu3awwsTI=w120-h120-l90-rj",
+                "width": 120,
+                "height": 120
+              },
+              {
+                "url": "https://yt3.googleusercontent.com/5d51ZlGjNP_Gss3Z3RKP7B98ASQ7pxvp4XI3IAQ3kniFFjgLPDPnR6_K3tYZGoMVvfJYXBtu3awwsTI=w60-h60-l90-rj",
+                "width": 60,
+                "height": 60
+              }
+            ]
+          },
+          "id": "n0GXk_T2zs8",
+          "title": "Training Season",
+          "album": {
+            "id": "MPREb_jpFXUk5ZtVc",
+            "name": "Radical Optimism"
+          },
+          "artists": [
+            {
+              "name": "Dua Lipa",
+              "channel_id": "UCzVb0SIXp9q9PeKCcFjsBtA"
+            }
+          ]
+        },
+        {
+          "type": "MusicResponsiveListItem",
+          "item_type": "song",
+          "thumbnail": {
+            "type": "MusicThumbnail",
+            "contents": [
+              {
+                "url": "https://yt3.googleusercontent.com/3Msew1Gh4-sKD8l5LrlJuFarOtRURRm9Wx0Ukyq-tWSnS88HOTxlmSO4_jionL-GX6xAU5_aQDQRBszB=w120-h120-l90-rj",
+                "width": 120,
+                "height": 120
+              },
+              {
+                "url": "https://yt3.googleusercontent.com/3Msew1Gh4-sKD8l5LrlJuFarOtRURRm9Wx0Ukyq-tWSnS88HOTxlmSO4_jionL-GX6xAU5_aQDQRBszB=w60-h60-l90-rj",
+                "width": 60,
+                "height": 60
+              }
+            ]
+          },
+          "id": "ASBUp9jG6LI",
+          "title": "Ini Abadi",
+          "album": {
+            "id": "MPREb_N87FXayAy45",
+            "name": "Memorandum"
+          },
+          "artists": [
+            {
+              "name": "Perunggu",
+              "channel_id": "UCzP_EyHbxIc77ENSRrNNAyg"
+            }
+          ]
+        },
+        {
+          "type": "MusicResponsiveListItem",
+          "item_type": "song",
+          "thumbnail": {
+            "type": "MusicThumbnail",
+            "contents": [
+              {
+                "url": "https://yt3.googleusercontent.com/K5vtZeCrcNqgF8WcovqMLUs4qA4hwkTGVwTV07Tl1Rd6mpQsPpIbTFWiPtdOD79qfGR0w3_-cAUT3imu=w120-h120-l90-rj",
+                "width": 120,
+                "height": 120
+              },
+              {
+                "url": "https://yt3.googleusercontent.com/K5vtZeCrcNqgF8WcovqMLUs4qA4hwkTGVwTV07Tl1Rd6mpQsPpIbTFWiPtdOD79qfGR0w3_-cAUT3imu=w60-h60-l90-rj",
+                "width": 60,
+                "height": 60
+              }
+            ]
+          },
+          "id": "KcRfqyvCg3Y",
+          "title": "Negoro Angin",
+          "album": {
+            "id": "MPREb_6TBp9ZO818h",
+            "name": "Negoro Angin"
+          },
+          "artists": [
+            {
+              "name": "Niken Salindry",
+              "channel_id": "UCTvGxrpfXOgfvVvhvr_lckQ"
+            }
+          ]
+        },
+        {
+          "type": "MusicResponsiveListItem",
+          "item_type": "song",
+          "thumbnail": {
+            "type": "MusicThumbnail",
+            "contents": [
+              {
+                "url": "https://yt3.googleusercontent.com/NEBJzdkZd5nAnxlhXZD53IZcftW8v88BDTZm_NL_eO6aWM-n2JQLsu2Bspcy1vVS_tgKUZaZ5AUPsx8F=w120-h120-l90-rj",
+                "width": 120,
+                "height": 120
+              },
+              {
+                "url": "https://yt3.googleusercontent.com/NEBJzdkZd5nAnxlhXZD53IZcftW8v88BDTZm_NL_eO6aWM-n2JQLsu2Bspcy1vVS_tgKUZaZ5AUPsx8F=w60-h60-l90-rj",
+                "width": 60,
+                "height": 60
+              }
+            ]
+          },
+          "id": "uNZUztZzBZE",
+          "title": "Lama kaki patah",
+          "album": {
+            "id": "MPREb_oPxpOd3hoAa",
+            "name": "Lama kaki patah"
+          },
+          "artists": [
+            {
+              "name": "Pria Solo",
+              "channel_id": "UCRVfSoph70zMQQLek7asGNA"
+            }
+          ]
+        },
+        {
+          "type": "MusicResponsiveListItem",
+          "item_type": "song",
+          "thumbnail": {
+            "type": "MusicThumbnail",
+            "contents": [
+              {
+                "url": "https://yt3.googleusercontent.com/b29NtY5YYUkdagACCFdPx-DzPQ2lVM19-bUgBWcgbpluYvujXj-xZ_1wF84WKo7h2pbRiePnIEOUMEN8nQ=w120-h120-l90-rj",
+                "width": 120,
+                "height": 120
+              },
+              {
+                "url": "https://yt3.googleusercontent.com/b29NtY5YYUkdagACCFdPx-DzPQ2lVM19-bUgBWcgbpluYvujXj-xZ_1wF84WKo7h2pbRiePnIEOUMEN8nQ=w60-h60-l90-rj",
+                "width": 60,
+                "height": 60
+              }
+            ]
+          },
+          "id": "sYfzcAKzB3Y",
+          "title": "Titik Nadir (feat. Monita Tahalea)",
+          "album": {
+            "id": "MPREb_PhvOPqLudoV",
+            "name": "Titik Nadir (feat. Monita Tahalea)"
+          },
+          "artists": [
+            {
+              "name": "Kahitna",
+              "channel_id": "UCWlxzIM_ruFSkraPvImck7Q"
+            },
+            {
+              "name": "Monita Tahalea",
+              "channel_id": "UCYiSvu9_A7NtzaOmHzyg0JQ"
+            }
+          ]
+        },
+        {
+          "type": "MusicResponsiveListItem",
+          "item_type": "song",
+          "thumbnail": {
+            "type": "MusicThumbnail",
+            "contents": [
+              {
+                "url": "https://yt3.googleusercontent.com/knDjd4cOvR-Y0Af1ZuoWX3lreoEJNu2W6bDXN7xZDKiudI_W2VIsb7ZAJEnOeLGIsToqryl65gQvrzWyyA=w120-h120-l90-rj",
+                "width": 120,
+                "height": 120
+              },
+              {
+                "url": "https://yt3.googleusercontent.com/knDjd4cOvR-Y0Af1ZuoWX3lreoEJNu2W6bDXN7xZDKiudI_W2VIsb7ZAJEnOeLGIsToqryl65gQvrzWyyA=w60-h60-l90-rj",
+                "width": 60,
+                "height": 60
+              }
+            ]
+          },
+          "id": "-avmRXjh8Gg",
+          "title": "Salah Apa",
+          "album": {
+            "id": "MPREb_zxcMLHAXXNW",
+            "name": "Salah Apa"
+          },
+          "artists": [
+            {
+              "name": "Ipank",
+              "channel_id": "UCh5q65iDAYzY73x4N7_IN6g"
+            }
+          ]
+        },
+        {
+          "type": "MusicResponsiveListItem",
+          "item_type": "song",
+          "thumbnail": {
+            "type": "MusicThumbnail",
+            "contents": [
+              {
+                "url": "https://yt3.googleusercontent.com/p5fiwlhLCznW8hpHjP58lWSGMK84OtyqY2jl1NrJ1QkqsqXOs3F59DY_cxoAikKXaEmFx_K_kZlTdibQ=w120-h120-l90-rj",
+                "width": 120,
+                "height": 120
+              },
+              {
+                "url": "https://yt3.googleusercontent.com/p5fiwlhLCznW8hpHjP58lWSGMK84OtyqY2jl1NrJ1QkqsqXOs3F59DY_cxoAikKXaEmFx_K_kZlTdibQ=w60-h60-l90-rj",
+                "width": 60,
+                "height": 60
+              }
+            ]
+          },
+          "id": "vu1HJ2CCQy4",
+          "title": "Di Keheningan Malam Ku Bersujud",
+          "album": {
+            "id": "MPREb_VneBqSCs8Zr",
+            "name": "Di Keheningan Malam Ku Bersujud"
+          },
+          "artists": [
+            {
+              "name": "Santri Metal Family",
+              "channel_id": "UCiN686IhaDazffTO_JfCsjw"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "header": {
+        "type": "MusicCarouselShelfBasicHeader",
+        "title": {
+          "text": "Trending community playlists",
+          "runs": [
+            {
+              "text": "Trending community playlists",
+              "bold": false,
+              "bracket": false,
+              "deemphasize": false,
+              "italics": false,
+              "strikethrough": false,
+              "error_underline": false,
+              "underline": false
+            }
+          ],
+          "rtl": false
+        }
+      },
+      "contents": [
+        {
+          "type": "MusicTwoRowItem",
+          "title": {
+            "text": "santai",
+            "runs": [
+              {
+                "text": "santai",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              }
+            ],
+            "rtl": false
+          },
+          "id": "VLPLF3h4hNV9dlgGs8M4x6AXGgn53qlzHF2J",
+          "subtitle": {
+            "text": "Irudiana00 • 5.2M views",
+            "runs": [
+              {
+                "text": "Irudiana00",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              },
+              {
+                "text": " • ",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              },
+              {
+                "text": "5.2M views",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              }
+            ],
+            "rtl": false
+          },
+          "item_type": "playlist",
+          "item_count": null,
+          "thumbnail": [
+            {
+              "url": "https://yt3.googleusercontent.com/PR-EXqPEf4aHFFLHknd2II-rvvVINdq7mS_eaHe4NEX11w2P6N8SztkPlouSzvGX6gtuMeeJXro=s576",
+              "width": 576,
+              "height": 576
+            },
+            {
+              "url": "https://yt3.googleusercontent.com/PR-EXqPEf4aHFFLHknd2II-rvvVINdq7mS_eaHe4NEX11w2P6N8SztkPlouSzvGX6gtuMeeJXro=s192",
+              "width": 192,
+              "height": 192
+            }
+          ],
+          "thumbnail_overlay": {
+            "type": "MusicItemThumbnailOverlay",
+            "content": {
+              "type": "MusicPlayButton",
+              "play_icon_type": "PLAY_ARROW",
+              "pause_icon_type": "PAUSE",
+              "icon_color": 4294967295,
+              "accessibility_play_data": {
+                "accessibility_data": {
+                  "label": "Play santai"
+                }
+              },
+              "accessibility_pause_data": {
+                "accessibility_data": {
+                  "label": "Pause santai"
+                }
+              }
+            },
+            "content_position": "MUSIC_ITEM_THUMBNAIL_OVERLAY_CONTENT_POSITION_BOTTOM_RIGHT",
+            "display_style": "MUSIC_ITEM_THUMBNAIL_OVERLAY_DISPLAY_STYLE_HOVER"
+          }
+        },
+        {
+          "type": "MusicTwoRowItem",
+          "title": {
+            "text": "Kompilasi Lagu Pop Indonesia 90an",
+            "runs": [
+              {
+                "text": "Kompilasi Lagu Pop Indonesia 90an",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              }
+            ],
+            "rtl": false
+          },
+          "id": "VLPLw3xXmiGk7179fZ_q7f3YgmuD05U7ClHr",
+          "subtitle": {
+            "text": "Dadang Rustiawan • 17M views",
+            "runs": [
+              {
+                "text": "Dadang Rustiawan",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              },
+              {
+                "text": " • ",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              },
+              {
+                "text": "17M views",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              }
+            ],
+            "rtl": false
+          },
+          "item_type": "playlist",
+          "item_count": null,
+          "thumbnail": [
+            {
+              "url": "https://yt3.ggpht.com/2908vJ0ZJUho_pXI5ZdX1068GnxX9sp2G8uFN7FqWTsKUNsxuMnCMo8FITvAI7Hapw0ebmmA6Q=s576",
+              "width": 576,
+              "height": 576
+            },
+            {
+              "url": "https://yt3.ggpht.com/2908vJ0ZJUho_pXI5ZdX1068GnxX9sp2G8uFN7FqWTsKUNsxuMnCMo8FITvAI7Hapw0ebmmA6Q=s192",
+              "width": 192,
+              "height": 192
+            }
+          ],
+          "thumbnail_overlay": {
+            "type": "MusicItemThumbnailOverlay",
+            "content": {
+              "type": "MusicPlayButton",
+              "play_icon_type": "PLAY_ARROW",
+              "pause_icon_type": "PAUSE",
+              "icon_color": 4294967295,
+              "accessibility_play_data": {
+                "accessibility_data": {
+                  "label": "Play Kompilasi Lagu Pop Indonesia 90an"
+                }
+              },
+              "accessibility_pause_data": {
+                "accessibility_data": {
+                  "label": "Pause Kompilasi Lagu Pop Indonesia 90an"
+                }
+              }
+            },
+            "content_position": "MUSIC_ITEM_THUMBNAIL_OVERLAY_CONTENT_POSITION_BOTTOM_RIGHT",
+            "display_style": "MUSIC_ITEM_THUMBNAIL_OVERLAY_DISPLAY_STYLE_HOVER"
+          }
+        },
+        {
+          "type": "MusicTwoRowItem",
+          "title": {
+            "text": "lagi 90an",
+            "runs": [
+              {
+                "text": "lagi 90an",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              }
+            ],
+            "rtl": false
+          },
+          "id": "VLPLLUjrag8coONXzRgi5u65btpGcrW4nKDp",
+          "subtitle": {
+            "text": "TUKANG COLMEK😛😛 • 529K views",
+            "runs": [
+              {
+                "text": "TUKANG COLMEK😛😛",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              },
+              {
+                "text": " • ",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              },
+              {
+                "text": "529K views",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              }
+            ],
+            "rtl": false
+          },
+          "item_type": "playlist",
+          "item_count": null,
+          "thumbnail": [
+            {
+              "url": "https://yt3.googleusercontent.com/hNhkHqg6A80rQggEsdrUtI4-l3GfsQxX4YV4XYJB-XMTSGkfVMAQVsJ1VA_vCi6U5bp_yS8PLQ=s576",
+              "width": 576,
+              "height": 576
+            },
+            {
+              "url": "https://yt3.googleusercontent.com/hNhkHqg6A80rQggEsdrUtI4-l3GfsQxX4YV4XYJB-XMTSGkfVMAQVsJ1VA_vCi6U5bp_yS8PLQ=s192",
+              "width": 192,
+              "height": 192
+            }
+          ],
+          "thumbnail_overlay": {
+            "type": "MusicItemThumbnailOverlay",
+            "content": {
+              "type": "MusicPlayButton",
+              "play_icon_type": "PLAY_ARROW",
+              "pause_icon_type": "PAUSE",
+              "icon_color": 4294967295,
+              "accessibility_play_data": {
+                "accessibility_data": {
+                  "label": "Play lagi 90an"
+                }
+              },
+              "accessibility_pause_data": {
+                "accessibility_data": {
+                  "label": "Pause lagi 90an"
+                }
+              }
+            },
+            "content_position": "MUSIC_ITEM_THUMBNAIL_OVERLAY_CONTENT_POSITION_BOTTOM_RIGHT",
+            "display_style": "MUSIC_ITEM_THUMBNAIL_OVERLAY_DISPLAY_STYLE_HOVER"
+          }
+        },
+        {
+          "type": "MusicTwoRowItem",
+          "title": {
+            "text": "OBAT NGANTUK FREN",
+            "runs": [
+              {
+                "text": "OBAT NGANTUK FREN",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              }
+            ],
+            "rtl": false
+          },
+          "id": "VLPLgp8PI6tWRQuP6NJDoKUhoUuqOl42-Cnl",
+          "subtitle": {
+            "text": "hizkiagozandri • 1.8M views",
+            "runs": [
+              {
+                "text": "hizkiagozandri",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              },
+              {
+                "text": " • ",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              },
+              {
+                "text": "1.8M views",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              }
+            ],
+            "rtl": false
+          },
+          "item_type": "playlist",
+          "item_count": null,
+          "thumbnail": [
+            {
+              "url": "https://yt3.googleusercontent.com/brvtYiBN7luTh0n4zfvN-9IF8VLq6UM4n30FnAF6Ceq2QPqawdy8xwaZOVexkZ1uHXkfoTvS1Dk=s576",
+              "width": 576,
+              "height": 576
+            },
+            {
+              "url": "https://yt3.googleusercontent.com/brvtYiBN7luTh0n4zfvN-9IF8VLq6UM4n30FnAF6Ceq2QPqawdy8xwaZOVexkZ1uHXkfoTvS1Dk=s192",
+              "width": 192,
+              "height": 192
+            }
+          ],
+          "thumbnail_overlay": {
+            "type": "MusicItemThumbnailOverlay",
+            "content": {
+              "type": "MusicPlayButton",
+              "play_icon_type": "PLAY_ARROW",
+              "pause_icon_type": "PAUSE",
+              "icon_color": 4294967295,
+              "accessibility_play_data": {
+                "accessibility_data": {
+                  "label": "Play OBAT NGANTUK FREN"
+                }
+              },
+              "accessibility_pause_data": {
+                "accessibility_data": {
+                  "label": "Pause OBAT NGANTUK FREN"
+                }
+              }
+            },
+            "content_position": "MUSIC_ITEM_THUMBNAIL_OVERLAY_CONTENT_POSITION_BOTTOM_RIGHT",
+            "display_style": "MUSIC_ITEM_THUMBNAIL_OVERLAY_DISPLAY_STYLE_HOVER"
+          }
+        },
+        {
+          "type": "MusicTwoRowItem",
+          "title": {
+            "text": "Favorite Indonesian",
+            "runs": [
+              {
+                "text": "Favorite Indonesian",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              }
+            ],
+            "rtl": false
+          },
+          "id": "VLPLj_UNkP_LIIDwoyA0Zgybtug3Qnf8SHqh",
+          "subtitle": {
+            "text": "Bray • 1.5M views",
+            "runs": [
+              {
+                "text": "Bray",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              },
+              {
+                "text": " • ",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              },
+              {
+                "text": "1.5M views",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              }
+            ],
+            "rtl": false
+          },
+          "item_type": "playlist",
+          "item_count": null,
+          "thumbnail": [
+            {
+              "url": "https://yt3.googleusercontent.com/YNoo91TSJfieCZKRLQoZ09mdCkpYs2chqkHPOmRTajmI5V2zskKzWODS2u-Q9LFuu0oxBHSh3Y8=s576",
+              "width": 576,
+              "height": 576
+            },
+            {
+              "url": "https://yt3.googleusercontent.com/YNoo91TSJfieCZKRLQoZ09mdCkpYs2chqkHPOmRTajmI5V2zskKzWODS2u-Q9LFuu0oxBHSh3Y8=s192",
+              "width": 192,
+              "height": 192
+            }
+          ],
+          "thumbnail_overlay": {
+            "type": "MusicItemThumbnailOverlay",
+            "content": {
+              "type": "MusicPlayButton",
+              "play_icon_type": "PLAY_ARROW",
+              "pause_icon_type": "PAUSE",
+              "icon_color": 4294967295,
+              "accessibility_play_data": {
+                "accessibility_data": {
+                  "label": "Play Favorite Indonesian"
+                }
+              },
+              "accessibility_pause_data": {
+                "accessibility_data": {
+                  "label": "Pause Favorite Indonesian"
+                }
+              }
+            },
+            "content_position": "MUSIC_ITEM_THUMBNAIL_OVERLAY_CONTENT_POSITION_BOTTOM_RIGHT",
+            "display_style": "MUSIC_ITEM_THUMBNAIL_OVERLAY_DISPLAY_STYLE_HOVER"
+          }
+        },
+        {
+          "type": "MusicTwoRowItem",
+          "title": {
+            "text": "galau inggris",
+            "runs": [
+              {
+                "text": "galau inggris",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              }
+            ],
+            "rtl": false
+          },
+          "id": "VLPL0ef2qZfl-_4OfUMaMOL7Rkx5S2TaSee7",
+          "subtitle": {
+            "text": "Resti Laora Cahyeny • 3.8M views",
+            "runs": [
+              {
+                "text": "Resti Laora Cahyeny",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              },
+              {
+                "text": " • ",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              },
+              {
+                "text": "3.8M views",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              }
+            ],
+            "rtl": false
+          },
+          "item_type": "playlist",
+          "item_count": null,
+          "thumbnail": [
+            {
+              "url": "https://yt3.googleusercontent.com/DOCADxsKgbDuuqrHTI68WWJd4Tl7q6YQnrKHH412aTaKvv_1IfIRmS3YRq4x548EmOrc-cxcZykz=s576",
+              "width": 576,
+              "height": 576
+            },
+            {
+              "url": "https://yt3.googleusercontent.com/DOCADxsKgbDuuqrHTI68WWJd4Tl7q6YQnrKHH412aTaKvv_1IfIRmS3YRq4x548EmOrc-cxcZykz=s192",
+              "width": 192,
+              "height": 192
+            }
+          ],
+          "thumbnail_overlay": {
+            "type": "MusicItemThumbnailOverlay",
+            "content": {
+              "type": "MusicPlayButton",
+              "play_icon_type": "PLAY_ARROW",
+              "pause_icon_type": "PAUSE",
+              "icon_color": 4294967295,
+              "accessibility_play_data": {
+                "accessibility_data": {
+                  "label": "Play galau inggris"
+                }
+              },
+              "accessibility_pause_data": {
+                "accessibility_data": {
+                  "label": "Pause galau inggris"
+                }
+              }
+            },
+            "content_position": "MUSIC_ITEM_THUMBNAIL_OVERLAY_CONTENT_POSITION_BOTTOM_RIGHT",
+            "display_style": "MUSIC_ITEM_THUMBNAIL_OVERLAY_DISPLAY_STYLE_HOVER"
+          }
+        },
+        {
+          "type": "MusicTwoRowItem",
+          "title": {
+            "text": "Indo 2000an",
+            "runs": [
+              {
+                "text": "Indo 2000an",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              }
+            ],
+            "rtl": false
+          },
+          "id": "VLPL-k3VXCZM5qCr7ZGfPjwNeUIQf1DEoG3D",
+          "subtitle": {
+            "text": "Stevany 96 • 5.2M views",
+            "runs": [
+              {
+                "text": "Stevany 96",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              },
+              {
+                "text": " • ",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              },
+              {
+                "text": "5.2M views",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              }
+            ],
+            "rtl": false
+          },
+          "item_type": "playlist",
+          "item_count": null,
+          "thumbnail": [
+            {
+              "url": "https://yt3.googleusercontent.com/G1ZUl8f-ZilhaJmecbdixZyhFHXsu7RMddMqY8yfifqBLTVDY11Eeq6AF2ruGKZNY9WFPHbl7Jo=s576",
+              "width": 576,
+              "height": 576
+            },
+            {
+              "url": "https://yt3.googleusercontent.com/G1ZUl8f-ZilhaJmecbdixZyhFHXsu7RMddMqY8yfifqBLTVDY11Eeq6AF2ruGKZNY9WFPHbl7Jo=s192",
+              "width": 192,
+              "height": 192
+            }
+          ],
+          "thumbnail_overlay": {
+            "type": "MusicItemThumbnailOverlay",
+            "content": {
+              "type": "MusicPlayButton",
+              "play_icon_type": "PLAY_ARROW",
+              "pause_icon_type": "PAUSE",
+              "icon_color": 4294967295,
+              "accessibility_play_data": {
+                "accessibility_data": {
+                  "label": "Play Indo 2000an"
+                }
+              },
+              "accessibility_pause_data": {
+                "accessibility_data": {
+                  "label": "Pause Indo 2000an"
+                }
+              }
+            },
+            "content_position": "MUSIC_ITEM_THUMBNAIL_OVERLAY_CONTENT_POSITION_BOTTOM_RIGHT",
+            "display_style": "MUSIC_ITEM_THUMBNAIL_OVERLAY_DISPLAY_STYLE_HOVER"
+          }
+        },
+        {
+          "type": "MusicTwoRowItem",
+          "title": {
+            "text": "Top 40 Chart 2026 - Lagu Terbaru Terpopuler saat ini",
+            "runs": [
+              {
+                "text": "Top 40 Chart 2026 - Lagu Terbaru Terpopuler saat ini",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              }
+            ],
+            "rtl": false
+          },
+          "id": "VLPLBDQsVHdN3A6auOdmi9tC1LTPG4IXCbW9",
+          "subtitle": {
+            "text": "HitListe • 1.3M views",
+            "runs": [
+              {
+                "text": "HitListe",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              },
+              {
+                "text": " • ",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              },
+              {
+                "text": "1.3M views",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              }
+            ],
+            "rtl": false
+          },
+          "item_type": "playlist",
+          "item_count": null,
+          "thumbnail": [
+            {
+              "url": "https://yt3.googleusercontent.com/aOivg4CYdCrwRd7piVl4tRvpEFh8PZc7gu6RA76g86jD9IoUV9dOOsEABvTt7HTpGBuiY27KN_-u=s576",
+              "width": 576,
+              "height": 576
+            },
+            {
+              "url": "https://yt3.googleusercontent.com/aOivg4CYdCrwRd7piVl4tRvpEFh8PZc7gu6RA76g86jD9IoUV9dOOsEABvTt7HTpGBuiY27KN_-u=s192",
+              "width": 192,
+              "height": 192
+            }
+          ],
+          "thumbnail_overlay": {
+            "type": "MusicItemThumbnailOverlay",
+            "content": {
+              "type": "MusicPlayButton",
+              "play_icon_type": "PLAY_ARROW",
+              "pause_icon_type": "PAUSE",
+              "icon_color": 4294967295,
+              "accessibility_play_data": {
+                "accessibility_data": {
+                  "label": "Play Top 40 Chart 2026 - Lagu Terbaru Terpopuler saat ini"
+                }
+              },
+              "accessibility_pause_data": {
+                "accessibility_data": {
+                  "label": "Pause Top 40 Chart 2026 - Lagu Terbaru Terpopuler saat ini"
+                }
+              }
+            },
+            "content_position": "MUSIC_ITEM_THUMBNAIL_OVERLAY_CONTENT_POSITION_BOTTOM_RIGHT",
+            "display_style": "MUSIC_ITEM_THUMBNAIL_OVERLAY_DISPLAY_STYLE_HOVER"
+          }
+        },
+        {
+          "type": "MusicTwoRowItem",
+          "title": {
+            "text": "Indonesia Populer 2022",
+            "runs": [
+              {
+                "text": "Indonesia Populer 2022",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              }
+            ],
+            "rtl": false
+          },
+          "id": "VLPL-XOmrg6D1r7_6as5qnsiprLJlwKrzJPd",
+          "subtitle": {
+            "text": "Mrs. Ika Ayu • 1.4M views",
+            "runs": [
+              {
+                "text": "Mrs. Ika Ayu",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              },
+              {
+                "text": " • ",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              },
+              {
+                "text": "1.4M views",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              }
+            ],
+            "rtl": false
+          },
+          "item_type": "playlist",
+          "item_count": null,
+          "thumbnail": [
+            {
+              "url": "https://yt3.googleusercontent.com/0atiQoiHdygW3SIqRlDFwUj9Zas2oNm-bD3GjTbJI6QQrUT0m2vUSQss6Q_KdhkUPpiJr1q0-g=s576",
+              "width": 576,
+              "height": 576
+            },
+            {
+              "url": "https://yt3.googleusercontent.com/0atiQoiHdygW3SIqRlDFwUj9Zas2oNm-bD3GjTbJI6QQrUT0m2vUSQss6Q_KdhkUPpiJr1q0-g=s192",
+              "width": 192,
+              "height": 192
+            }
+          ],
+          "thumbnail_overlay": {
+            "type": "MusicItemThumbnailOverlay",
+            "content": {
+              "type": "MusicPlayButton",
+              "play_icon_type": "PLAY_ARROW",
+              "pause_icon_type": "PAUSE",
+              "icon_color": 4294967295,
+              "accessibility_play_data": {
+                "accessibility_data": {
+                  "label": "Play Indonesia Populer 2022"
+                }
+              },
+              "accessibility_pause_data": {
+                "accessibility_data": {
+                  "label": "Pause Indonesia Populer 2022"
+                }
+              }
+            },
+            "content_position": "MUSIC_ITEM_THUMBNAIL_OVERLAY_CONTENT_POSITION_BOTTOM_RIGHT",
+            "display_style": "MUSIC_ITEM_THUMBNAIL_OVERLAY_DISPLAY_STYLE_HOVER"
+          }
+        },
+        {
+          "type": "MusicTwoRowItem",
+          "title": {
+            "text": "my butterfly era🦋💌",
+            "runs": [
+              {
+                "text": "my butterfly era🦋💌",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              }
+            ],
+            "rtl": false
+          },
+          "id": "VLPLGI1ReTOeVmKPZ0mMfkHOnZIOn3W47aWB",
+          "subtitle": {
+            "text": "rei$ha • 693K views",
+            "runs": [
+              {
+                "text": "rei$ha",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              },
+              {
+                "text": " • ",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              },
+              {
+                "text": "693K views",
+                "bold": false,
+                "bracket": false,
+                "deemphasize": false,
+                "italics": false,
+                "strikethrough": false,
+                "error_underline": false,
+                "underline": false
+              }
+            ],
+            "rtl": false
+          },
+          "item_type": "playlist",
+          "item_count": null,
+          "thumbnail": [
+            {
+              "url": "https://yt3.googleusercontent.com/cNzK_K-UoxOwBKfNZxYDwvSARAZMRqPoVMuTikYOYYmw3a6U83RiUg6PrLxRVsKCnztKraAi8kLX=s576",
+              "width": 576,
+              "height": 576
+            },
+            {
+              "url": "https://yt3.googleusercontent.com/cNzK_K-UoxOwBKfNZxYDwvSARAZMRqPoVMuTikYOYYmw3a6U83RiUg6PrLxRVsKCnztKraAi8kLX=s192",
+              "width": 192,
+              "height": 192
+            }
+          ],
+          "thumbnail_overlay": {
+            "type": "MusicItemThumbnailOverlay",
+            "content": {
+              "type": "MusicPlayButton",
+              "play_icon_type": "PLAY_ARROW",
+              "pause_icon_type": "PAUSE",
+              "icon_color": 4294967295,
+              "accessibility_play_data": {
+                "accessibility_data": {
+                  "label": "Play my butterfly era🦋💌"
+                }
+              },
+              "accessibility_pause_data": {
+                "accessibility_data": {
+                  "label": "Pause my butterfly era🦋💌"
+                }
+              }
+            },
+            "content_position": "MUSIC_ITEM_THUMBNAIL_OVERLAY_CONTENT_POSITION_BOTTOM_RIGHT",
+            "display_style": "MUSIC_ITEM_THUMBNAIL_OVERLAY_DISPLAY_STYLE_HOVER"
+          }
+        }
+      ]
+    },
+    {}
+  ]
+}

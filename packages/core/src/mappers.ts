@@ -22,7 +22,12 @@ export interface RawItem {
   year?: string;
 }
 
-export const toText = (v: unknown): string => (v == null ? '' : String(v)).trim();
+/** youtubei.js `Text` nodes carry `.text`; their `toString()` returns "N/A" when empty. */
+export const toText = (v: unknown): string => {
+  if (v == null) return '';
+  if (typeof v === 'object' && 'text' in v) return String((v as { text?: unknown }).text ?? '').trim();
+  return String(v).trim();
+};
 
 export function mapThumbs(raw: Pick<RawItem, 'thumbnail' | 'thumbnails'> | undefined): Thumbnail[] {
   const t = raw?.thumbnail;

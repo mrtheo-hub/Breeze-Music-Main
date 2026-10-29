@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { mapHomeItem, mapThumbs, mapTrack, type RawItem } from '../src/mappers';
+import { mapHomeItem, mapThumbs, mapTrack, type RawItem, toText } from '../src/mappers';
 
 const text = (s: string) => ({ toString: () => s });
 
@@ -88,5 +88,21 @@ describe('mapHomeItem', () => {
       kind: 'artist',
       artist: { id: 'r', name: 'Daft Punk', thumbnails: [] },
     });
+  });
+});
+
+describe('toText', () => {
+  it('reads youtubei.js Text objects (as serialised: { text, runs })', () => {
+    expect(toText({ text: 'Hello', runs: [] })).toBe('Hello');
+  });
+
+  it('treats a Text with no text as empty, not "N/A"', () => {
+    expect(toText({ text: undefined, toString: () => 'N/A' })).toBe('');
+  });
+
+  it('still handles plain strings and toString-only objects', () => {
+    expect(toText('  hi ')).toBe('hi');
+    expect(toText(text('x'))).toBe('x');
+    expect(toText(undefined)).toBe('');
   });
 });
