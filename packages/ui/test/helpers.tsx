@@ -1,7 +1,11 @@
 import { MemoryStorage, type MusicSource, type Track } from '@breeze/core';
+import { render } from '@testing-library/react';
+import type { ReactElement } from 'react';
 import { PlayerController } from '../src/player/controller';
 import { Emitter } from '../src/player/emitter';
 import type { AudioEngine, EngineEvents } from '../src/player/engine';
+import { PlayerProvider } from '../src/player/PlayerContext';
+import { ServicesProvider } from '../src/services';
 
 export const t = (id: string, extra: Partial<Track> = {}): Track => ({
   id,
@@ -72,4 +76,14 @@ export function setup(over: { source?: Partial<MusicSource>; autoplay?: boolean 
   const source = fakeSource(over.source);
   const player = new PlayerController({ engine, source, storage, autoplay: () => over.autoplay ?? true });
   return { engine, storage, source, player };
+}
+
+export function renderWithApp(ui: ReactElement, over: Parameters<typeof setup>[0] = {}) {
+  const ctx = setup(over);
+  const utils = render(
+    <ServicesProvider services={{ source: ctx.source, storage: ctx.storage }}>
+      <PlayerProvider controller={ctx.player}>{ui}</PlayerProvider>
+    </ServicesProvider>,
+  );
+  return { ...ctx, ...utils };
 }
