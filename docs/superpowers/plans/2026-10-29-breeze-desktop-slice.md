@@ -169,7 +169,10 @@ await save('home', {
 const album: any = await yt.music.getAlbum(albumId);
 await save('album', { header: album.header, contents: album.contents });
 const artist: any = await yt.music.getArtist(artistId);
-await save('artist', { header: artist.header, sections: (artist.sections ?? []).map((s: any) => ({ contents: s?.contents })) });
+await save('artist', {
+  header: artist.header,
+  sections: (artist.sections ?? []).map((s: any) => ({ contents: s?.contents })),
+});
 const upNext: any = await yt.music.getUpNext(songId);
 await save('upnext', { contents: upNext.contents });
 const info: any = await yt.music.getInfo(songId);
@@ -537,9 +540,7 @@ export interface StreamClient {
 const SIX_HOURS = 6 * 3600 * 1000;
 
 export function pickFormat(formats: RawFormat[], quality: AudioQuality): RawFormat | null {
-  const audio = formats
-    .filter((f) => f.has_audio && !f.has_video)
-    .sort((a, b) => (a.bitrate ?? 0) - (b.bitrate ?? 0));
+  const audio = formats.filter((f) => f.has_audio && !f.has_video).sort((a, b) => (a.bitrate ?? 0) - (b.bitrate ?? 0));
   if (audio.length === 0) return null;
   const at = quality === 'low' ? 0 : quality === 'medium' ? Math.floor((audio.length - 1) / 2) : audio.length - 1;
   return audio[at] ?? null;
@@ -1318,7 +1319,13 @@ describe('pickThumb', () => {
 
 describe('uniqueById', () => {
   it('keeps the first of each id', () => {
-    expect(uniqueById([{ id: 'a', n: 1 }, { id: 'b', n: 2 }, { id: 'a', n: 3 }]).map((x) => x.n)).toEqual([1, 2]);
+    expect(
+      uniqueById([
+        { id: 'a', n: 1 },
+        { id: 'b', n: 2 },
+        { id: 'a', n: 3 },
+      ]).map((x) => x.n),
+    ).toEqual([1, 2]);
   });
 });
 ```
@@ -1442,7 +1449,10 @@ describe('TrackRow', () => {
 
   it('swaps a broken image for the placeholder', () => {
     const { container } = render(
-      <TrackRow track={t('a', { thumbnails: [{ url: 'https://x/broken.jpg', width: 60, height: 60 }] })} onPlay={() => {}} />,
+      <TrackRow
+        track={t('a', { thumbnails: [{ url: 'https://x/broken.jpg', width: 60, height: 60 }] })}
+        onPlay={() => {}}
+      />,
     );
     const img = container.querySelector('img');
     expect(img).not.toBeNull();
@@ -1771,7 +1781,12 @@ import { HomeScreen } from '../src/screens/HomeScreen';
 import { SearchScreen } from '../src/screens/SearchScreen';
 import { flush, renderWithApp, t } from './helpers';
 
-const songs = (...ids: string[]): SearchResult => ({ songs: ids.map((id) => t(id)), albums: [], artists: [], playlists: [] });
+const songs = (...ids: string[]): SearchResult => ({
+  songs: ids.map((id) => t(id)),
+  albums: [],
+  artists: [],
+  playlists: [],
+});
 
 describe('SearchScreen', () => {
   it('prompts before typing', () => {
@@ -1935,18 +1950,7 @@ Create `packages/ui/src/components/PlayerBar.tsx`:
 
 ```tsx
 import { current } from '@breeze/core';
-import {
-  Loader2,
-  Pause,
-  Play,
-  Repeat,
-  Repeat1,
-  Shuffle,
-  SkipBack,
-  SkipForward,
-  Volume2,
-  VolumeX,
-} from 'lucide-react';
+import { Loader2, Pause, Play, Repeat, Repeat1, Shuffle, SkipBack, SkipForward, Volume2, VolumeX } from 'lucide-react';
 import { artistNames, formatTime } from '../format';
 import { usePlayer } from '../player/PlayerContext';
 import { Artwork } from './Artwork';
@@ -2426,7 +2430,7 @@ body,
 body {
   background: var(--bg);
   color: var(--text);
-  font: 14px/1.45 var(--font);
+  font: 14px / 1.45 var(--font);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -3897,7 +3901,9 @@ const settings = await storage.getSettings().catch(() => DEFAULT_SETTINGS);
 const engine = new HtmlAudioEngine(ipcStreams(api), () => settings.audioQuality);
 const player = new PlayerController({ engine, source, storage, autoplay: () => settings.autoplay }, settings.volume);
 
-createRoot(document.getElementById('root') as HTMLElement).render(<App player={player} services={{ source, storage }} />);
+createRoot(document.getElementById('root') as HTMLElement).render(
+  <App player={player} services={{ source, storage }} />,
+);
 ```
 
 - [ ] **Step 5: Typecheck, lint, build**
@@ -3937,8 +3943,8 @@ Any failure: debug with superpowers:systematic-debugging, then add a unit test f
 Modify `.github/workflows/ci.yml`. Add a job-level `env` under `check:` (at the same indent as `runs-on`), so CI does not download the Electron binary:
 
 ```yaml
-    env:
-      ELECTRON_SKIP_BINARY_DOWNLOAD: "1"
+env:
+  ELECTRON_SKIP_BINARY_DOWNLOAD: "1"
 ```
 
 Run: `pnpm lint` (it also formats YAML), then `pnpm test`.
