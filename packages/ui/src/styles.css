@@ -9,6 +9,7 @@
   --accent: #5cc8d6;
   --danger: #f2777a;
   --font: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --shadow: 0 8px 24px rgb(0 0 0 / 0.3);
   --player-h: 88px;
 }
 
@@ -23,6 +24,7 @@
     --text-muted: #56626e;
     --accent: #0d7a87;
     --danger: #b3261e;
+    --shadow: 0 8px 24px rgb(18 24 32 / 0.12);
   }
 }
 
@@ -237,6 +239,8 @@ button {
 
 .search-box:focus-within {
   border-color: var(--accent);
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .search-box input {
@@ -403,7 +407,7 @@ input[type="range"] {
   border-left: 3px solid var(--danger);
   border-radius: 10px;
   background: var(--surface-2);
-  box-shadow: 0 8px 24px rgb(0 0 0 / 0.3);
+  box-shadow: var(--shadow);
   transform: translateX(-50%);
 }
 
