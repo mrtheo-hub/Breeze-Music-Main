@@ -34,3 +34,12 @@ export function toSourceError(e: unknown): SourceError {
   const message = e instanceof Error ? e.message : String(e);
   return new SourceError(kindOf(message), message, { cause: e });
 }
+
+/** Run `fn`; rethrow anything it throws as a SourceError. */
+export async function guard<T>(fn: () => Promise<T>): Promise<T> {
+  try {
+    return await fn();
+  } catch (e) {
+    throw toSourceError(e);
+  }
+}

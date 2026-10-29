@@ -1,5 +1,5 @@
 import { Innertube } from 'youtubei.js';
-import { SourceError, toSourceError } from './errors';
+import { guard, SourceError } from './errors';
 import { mapHomeItem, mapThumbs, mapTrack, type RawItem, toText } from './mappers';
 import type { MusicSource, SearchFilter } from './source';
 import type { Album, Artist, HomeItem, HomeSection, Playlist, SearchResult, Track } from './types';
@@ -156,12 +156,4 @@ function groupItems(list: HomeItem[]): SearchResult {
 
 function emptySearch(): SearchResult {
   return { songs: [], albums: [], artists: [], playlists: [] };
-}
-
-async function guard<T>(fn: () => Promise<T>): Promise<T> {
-  try {
-    return await fn();
-  } catch (e) {
-    throw toSourceError(e);
-  }
 }

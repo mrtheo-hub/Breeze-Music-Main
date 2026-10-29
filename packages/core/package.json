@@ -5,7 +5,8 @@
   "type": "module",
   "exports": {
     ".": "./src/index.ts",
-    "./innertube": "./src/innertube.ts"
+    "./innertube": "./src/innertube.ts",
+    "./stream": "./src/stream.ts"
   },
   "scripts": {
     "test": "vitest run",

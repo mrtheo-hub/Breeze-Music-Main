@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { SourceError, toSourceError } from '../src/errors';
+import { guard, SourceError, toSourceError } from '../src/errors';
 
 describe('toSourceError', () => {
   it('passes a SourceError through unchanged', () => {
@@ -38,5 +38,19 @@ describe('toSourceError', () => {
   it('keeps the original error as cause', () => {
     const original = new Error('fetch failed');
     expect(toSourceError(original).cause).toBe(original);
+  });
+});
+
+describe('guard', () => {
+  it('returns the value', async () => {
+    expect(await guard(async () => 7)).toBe(7);
+  });
+
+  it('turns any throw into a SourceError', async () => {
+    const err = await guard(async () => {
+      throw new Error('fetch failed');
+    }).catch((e) => e);
+    expect(err).toBeInstanceOf(SourceError);
+    expect(err.kind).toBe('network');
   });
 });

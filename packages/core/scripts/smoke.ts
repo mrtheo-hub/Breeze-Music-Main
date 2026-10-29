@@ -1,6 +1,7 @@
 // Manual check against live YouTube Music. Not run in CI.
 import { InnerTubeSource } from '../src/innertube';
 import { fetchLyrics } from '../src/lyrics';
+import { StreamResolver } from '../src/stream';
 
 const src = await InnerTubeSource.create();
 
@@ -26,6 +27,11 @@ console.log(
   'up next:',
   (await src.upNext(song.id)).slice(0, 3).map((t) => t.title),
 );
+
+const streams = await StreamResolver.create();
+const stream = await streams.resolve(song.id, 'high');
+const probe = await fetch(stream.url, { headers: { Range: 'bytes=0-1023' } });
+console.log('stream:', stream.mimeType, stream.bitrate, '->', probe.status);
 
 const albumId = result.albums[0]?.id ?? song.album?.id;
 if (albumId) {
