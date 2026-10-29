@@ -85,6 +85,7 @@ export class PlayerController {
   }
 
   resume(): void {
+    if (this.loadInFlight) return; // load() starts playback itself when it finishes
     if (current(this.state.queue)) this.deps.engine.play();
   }
 

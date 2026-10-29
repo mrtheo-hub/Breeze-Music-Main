@@ -101,6 +101,24 @@ describe('PlayerController', () => {
     expect(current(player.getState().queue)?.id).toBe('fast');
   });
 
+  it('ignores resume and playPause while a load is pending', async () => {
+    const { engine, player } = setup();
+    let release = () => {};
+    engine.gates.set(
+      'b',
+      new Promise<void>((r) => {
+        release = r;
+      }),
+    );
+    const loading = player.playTracks([t('b')]);
+    player.resume();
+    player.playPause();
+    expect(engine.plays).toEqual([]);
+    release();
+    await loading;
+    expect(engine.plays).toEqual(['b']);
+  });
+
   it('prev restarts the track after 3 s, otherwise goes back', async () => {
     const { engine, player } = setup();
     await player.playTracks([t('a'), t('b')], 1);

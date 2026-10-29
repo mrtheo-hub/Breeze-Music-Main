@@ -14,7 +14,8 @@ export function SearchScreen({ debounceMs = 300 }: { debounceMs?: number }) {
   const { player, state } = usePlayer();
   const [text, setText] = useState('');
   const query = useDebounced(text.trim(), debounceMs);
-  const results = useAsync(query ? `search:${query}` : null, () => source.search(query, 'songs'));
+  // The raw text decides idle, so clearing the box drops stale results at once.
+  const results = useAsync(text.trim() && query ? `search:${query}` : null, () => source.search(query, 'songs'));
   const inputRef = useRef<HTMLInputElement>(null);
   const playingId = current(state.queue)?.id;
 

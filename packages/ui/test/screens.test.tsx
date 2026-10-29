@@ -57,6 +57,17 @@ describe('SearchScreen', () => {
   });
 });
 
+describe('SearchScreen debounce', () => {
+  it('shows the prompt immediately when cleared, without waiting for the debounce', async () => {
+    renderWithApp(<SearchScreen debounceMs={300} />, { source: { search: async () => songs('a') } });
+    const box = screen.getByRole('searchbox');
+    fireEvent.change(box, { target: { value: 'a' } });
+    await screen.findByRole('button', { name: /Song a/ });
+    fireEvent.change(box, { target: { value: '' } });
+    expect(screen.getByText('Find something to play')).toBeTruthy();
+  });
+});
+
 describe('HomeScreen', () => {
   it('shows sections that contain songs and plays within the section', async () => {
     const home: HomeSection[] = [

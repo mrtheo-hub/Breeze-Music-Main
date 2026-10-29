@@ -12,7 +12,12 @@ const EXPIRY_MARGIN_MS = 60_000;
 /** Seconds of playback past a retry that count as real progress. */
 const PROGRESS_S = 5;
 
-const isAbort = (e: unknown) => e instanceof DOMException && e.name === 'AbortError';
+/**
+ * play() rejections that need no report: AbortError (a newer load interrupted it) and NotSupportedError
+ * (the source failed; Chromium also fires a media 'error' event, and recover() owns that path).
+ */
+const isAbortOrNotSupported = (e: unknown) =>
+  e instanceof DOMException && (e.name === 'AbortError' || e.name === 'NotSupportedError');
 
 /** Plays resolved YouTube audio streams through an <audio> element. */
 export class HtmlAudioEngine implements AudioEngine {
@@ -51,11 +56,18 @@ export class HtmlAudioEngine implements AudioEngine {
     this.track = track;
     this.retried = false;
     this.live = false;
-    this.reloading = null;
     this.stream = null;
     this.audio.pause();
+    // Drop the previous track's source so currentTime resets and a later reload cannot inherit its position.
+    this.audio.removeAttribute('src');
+    this.audio.load();
     this.events.emit('state', 'loading');
-    await this.setSource(track, 0);
+    // Tracked as the pending resolve so play() during the load does not start a second one.
+    const p = this.setSource(track, 0).finally(() => {
+      if (this.reloading === p) this.reloading = null;
+    });
+    this.reloading = p;
+    await p;
   }
 
   play(): void {
@@ -66,7 +78,7 @@ export class HtmlAudioEngine implements AudioEngine {
       return;
     }
     this.audio.play().catch((e: unknown) => {
-      if (!isAbort(e)) this.events.emit('error', e);
+      if (!isAbortOrNotSupported(e)) this.events.emit('error', e);
     });
   }
 
@@ -116,7 +128,7 @@ export class HtmlAudioEngine implements AudioEngine {
     } catch (e) {
       if (this.track !== track) return;
       this.stream = null; // dead source: the next play() re-resolves
-      if (!isAbort(e)) this.events.emit('error', e);
+      if (!isAbortOrNotSupported(e)) this.events.emit('error', e);
     }
   }
 

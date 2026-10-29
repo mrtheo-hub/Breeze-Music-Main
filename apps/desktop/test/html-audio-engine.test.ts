@@ -12,6 +12,12 @@ class FakeAudio extends EventTarget {
   error: unknown = null;
   play = vi.fn(async () => {});
   pause = vi.fn();
+  removeAttribute = vi.fn((name: string) => {
+    if (name === 'src') this.src = '';
+  });
+  load = vi.fn(() => {
+    this.currentTime = 0;
+  });
 }
 
 const t = (id: string): Track => ({ id, title: id, artists: [], thumbnails: [] });
@@ -215,5 +221,39 @@ describe('HtmlAudioEngine', () => {
     engine.on('ended', ended);
     audio.dispatchEvent(new Event('ended'));
     expect(ended).toHaveBeenCalledOnce();
+  });
+
+  it('does not re-resolve at the old position when play() arrives during a load', async () => {
+    let releaseB = (_: StreamInfo) => {};
+    const { audio, streams, engine } = make((id) =>
+      id === 'b'
+        ? new Promise<StreamInfo>((r) => {
+            releaseB = r;
+          })
+        : Promise.resolve(info('https://s/a')),
+    );
+    await engine.load(t('a'));
+    audio.currentTime = 90;
+    const pending = engine.load(t('b'));
+    engine.play();
+    await flush();
+    expect(streams.resolve).toHaveBeenCalledTimes(2); // a, then b only
+    releaseB(info('https://s/b'));
+    await pending;
+    expect(audio.src).toBe('https://s/b');
+    expect(audio.currentTime).toBe(0);
+  });
+
+  it('leaves recovery to the media error event when play() rejects with NotSupportedError', async () => {
+    const { audio, streams, engine, errors } = make(async () => info('https://s/a'));
+    audio.play = vi.fn(async () => {
+      throw new DOMException('x', 'NotSupportedError');
+    });
+    await engine.load(t('a'));
+    engine.play();
+    audio.dispatchEvent(new Event('error'));
+    await flush();
+    expect(streams.resolve).toHaveBeenCalledTimes(2);
+    expect(errors).toEqual([]);
   });
 });
