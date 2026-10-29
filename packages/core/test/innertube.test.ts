@@ -1,4 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
+import { Innertube } from 'youtubei.js';
 import { SourceError } from '../src/errors';
 import { InnerTubeSource, type MusicClient } from '../src/innertube';
 
@@ -55,6 +56,16 @@ describe('InnerTubeSource.search', () => {
     const err = await new InnerTubeSource(fakeClient({ search })).search('x').catch((e) => e);
     expect(err).toBeInstanceOf(SourceError);
     expect(err.kind).toBe('blocked');
+  });
+});
+
+describe('InnerTubeSource.create', () => {
+  it('wraps a startup network failure in SourceError', async () => {
+    const spy = vi.spyOn(Innertube, 'create').mockRejectedValue(new TypeError('fetch failed'));
+    const err = await InnerTubeSource.create().catch((e) => e);
+    spy.mockRestore();
+    expect(err).toBeInstanceOf(SourceError);
+    expect(err.kind).toBe('network');
   });
 });
 

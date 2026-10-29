@@ -24,20 +24,38 @@ function withTracks(s: QueueState, tracks: Track[], index: number, original: Tra
   return { ...s, tracks, index, original: s.shuffled ? original : tracks };
 }
 
+/**
+ * Copy each incoming track so every queue entry is its own object. `original`
+ * is matched by reference, so the same song queued twice must not share one.
+ */
+const entries = (tracks: Track[]): Track[] => tracks.map((t) => ({ ...t }));
+
+function shuffleInPlace(list: Track[], random: () => number): void {
+  for (let i = list.length - 1; i > 0; i--) {
+    const j = Math.floor(random() * (i + 1));
+    [list[i], list[j]] = [list[j] as Track, list[i] as Track];
+  }
+}
+
 export function setQueue(s: QueueState, tracks: Track[], startIndex = 0, random = Math.random): QueueState {
-  const list = [...tracks];
+  const list = entries(tracks);
   const index = list.length === 0 ? -1 : Math.min(Math.max(startIndex, 0), list.length - 1);
-  const base: QueueState = { ...s, tracks: list, original: list, index, shuffled: false };
-  return s.shuffled ? toggleShuffle(base, random) : base;
+  if (!s.shuffled || index === -1) return { ...s, tracks: list, original: list, index, shuffled: false };
+  // Shuffled: the chosen track plays first, every other track follows in random order.
+  const rest = list.filter((_, i) => i !== index);
+  shuffleInPlace(rest, random);
+  return { ...s, tracks: [list[index] as Track, ...rest], original: list, index: 0, shuffled: true };
 }
 
 export function enqueue(s: QueueState, tracks: Track[]): QueueState {
-  const list = [...s.tracks, ...tracks];
+  const added = entries(tracks);
+  const list = [...s.tracks, ...added];
   const index = s.index === -1 && list.length > 0 ? 0 : s.index;
-  return withTracks(s, list, index, [...s.original, ...tracks]);
+  return withTracks(s, list, index, [...s.original, ...added]);
 }
 
-export function playNext(s: QueueState, tracks: Track[]): QueueState {
+export function playNext(s: QueueState, incoming: Track[]): QueueState {
+  const tracks = entries(incoming);
   const list = [...s.tracks];
   list.splice(s.index + 1, 0, ...tracks);
   const cur = current(s);
@@ -98,10 +116,7 @@ export function toggleShuffle(s: QueueState, random = Math.random): QueueState {
   if (!s.shuffled) {
     const played = s.tracks.slice(0, s.index + 1);
     const rest = s.tracks.slice(s.index + 1);
-    for (let i = rest.length - 1; i > 0; i--) {
-      const j = Math.floor(random() * (i + 1));
-      [rest[i], rest[j]] = [rest[j] as Track, rest[i] as Track];
-    }
+    shuffleInPlace(rest, random);
     return { ...s, tracks: [...played, ...rest], original: s.tracks, shuffled: true };
   }
   const cur = current(s);

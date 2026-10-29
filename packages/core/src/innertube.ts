@@ -30,9 +30,11 @@ const YEAR = /\b(19|20)\d{2}\b/;
 export class InnerTubeSource implements MusicSource {
   constructor(private readonly music: MusicClient) {}
 
-  static async create(): Promise<InnerTubeSource> {
-    const yt = await Innertube.create();
-    return new InnerTubeSource(yt.music as unknown as MusicClient);
+  static create(): Promise<InnerTubeSource> {
+    return guard(async () => {
+      const yt = await Innertube.create();
+      return new InnerTubeSource(yt.music as unknown as MusicClient);
+    });
   }
 
   home(): Promise<HomeSection[]> {

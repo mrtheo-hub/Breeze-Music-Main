@@ -175,4 +175,25 @@ describe('shuffle', () => {
     expect(s.shuffled).toBe(true);
     expect(current(s)?.id).toBe('a');
   });
+
+  it('setQueue while shuffled plays the start track first and every other track after it', () => {
+    const s = setQueue(toggleShuffle(emptyQueue()), ['a', 'b', 'c', 'd', 'e'].map(t), 3, () => 0);
+    expect(current(s)?.id).toBe('d');
+    expect(s.index).toBe(0);
+    expect([...ids(s.tracks)].sort()).toEqual(['a', 'b', 'c', 'd', 'e']);
+  });
+
+  it('unshuffle keeps the right copy when the same track is queued twice', () => {
+    const a = t('a');
+    const s = setQueue(emptyQueue(), [a, t('b'), t('c'), a], 3);
+    const back = toggleShuffle(toggleShuffle(s, () => 0));
+    expect(back.index).toBe(3);
+  });
+
+  it('removing a duplicate while shuffled removes that copy from the restored order', () => {
+    const a = t('a');
+    const shuffled = toggleShuffle(setQueue(emptyQueue(), [a, t('b'), a], 0), () => 0); // a, a, b
+    const s = toggleShuffle(removeAt(shuffled, 0)); // remove the first (playing) a
+    expect(ids(s.tracks)).toEqual(['b', 'a']);
+  });
 });

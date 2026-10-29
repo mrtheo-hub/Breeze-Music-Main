@@ -62,6 +62,11 @@ describe('fetchLyrics', () => {
     expect(await fetchLyrics({ ...query, artist: '' }, fetcher)).toEqual({ synced: null, plain: null });
   });
 
+  it('treats a non-array search body as no lyrics', async () => {
+    const { fetcher } = fakeFetch({ '/api/search': { status: 200, body: { error: 'odd' } } });
+    expect(await fetchLyrics({ title: 'x', artist: 'y' }, fetcher)).toEqual({ synced: null, plain: null });
+  });
+
   it('throws SourceError network on a 5xx', async () => {
     const { fetcher } = fakeFetch({ '/api/get': { status: 503 } });
     await expect(fetchLyrics(query, fetcher)).rejects.toMatchObject({ kind: 'network' });

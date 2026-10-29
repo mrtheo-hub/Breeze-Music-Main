@@ -33,7 +33,8 @@ export async function fetchLyrics(q: LyricsQuery, fetcher: Fetcher = (url) => fe
   }
   const params = new URLSearchParams({ track_name: q.title, artist_name: q.artist });
   const list = await getJson<LrclibRecord[]>(fetcher, `${BASE}/search?${params}`);
-  const best = list?.find((r) => r.syncedLyrics) ?? list?.[0];
+  if (!Array.isArray(list)) return NONE;
+  const best = list.find((r) => r.syncedLyrics) ?? list[0];
   return best ? toLyrics(best) : NONE;
 }
 
