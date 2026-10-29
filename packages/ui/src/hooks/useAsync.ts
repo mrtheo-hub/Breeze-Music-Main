@@ -12,22 +12,25 @@ export function useAsync<T>(key: string | null, load: () => Promise<T>): AsyncSt
   const loadRef = useRef(load);
   loadRef.current = load;
   const [attempt, setAttempt] = useState(0);
-  const [state, setState] = useState<AsyncState<T>>(key === null ? { status: 'idle' } : { status: 'loading' });
   const effectKey = key === null ? null : `${key}#${attempt}`;
+  const [settled, setSettled] = useState<{ key: string | null; value: AsyncState<T> }>({
+    key: effectKey,
+    value: effectKey === null ? { status: 'idle' } : { status: 'loading' },
+  });
 
   useEffect(() => {
     if (effectKey === null) {
-      setState({ status: 'idle' });
+      setSettled({ key: null, value: { status: 'idle' } });
       return;
     }
     let live = true;
-    setState({ status: 'loading' });
+    setSettled({ key: effectKey, value: { status: 'loading' } });
     loadRef.current().then(
       (data) => {
-        if (live) setState({ status: 'ready', data });
+        if (live) setSettled({ key: effectKey, value: { status: 'ready', data } });
       },
       (error: unknown) => {
-        if (live) setState({ status: 'error', error: toSourceError(error) });
+        if (live) setSettled({ key: effectKey, value: { status: 'error', error: toSourceError(error) } });
       },
     );
     return () => {
@@ -36,5 +39,8 @@ export function useAsync<T>(key: string | null, load: () => Promise<T>): AsyncSt
   }, [effectKey]);
 
   const retry = useCallback(() => setAttempt((n) => n + 1), []);
+  // A result stored for another key is never shown: derive loading/idle synchronously.
+  const state: AsyncState<T> =
+    settled.key === effectKey ? settled.value : effectKey === null ? { status: 'idle' } : { status: 'loading' };
   return { ...state, retry };
 }

@@ -56,4 +56,35 @@ describe('useAsync', () => {
     act(() => result.current.retry());
     await waitFor(() => expect(load).toHaveBeenCalledTimes(2));
   });
+
+  it('never renders a previous key result for a new key', async () => {
+    const renders: string[] = [];
+    const { rerender } = renderHook(
+      ({ k }) => {
+        const r = useAsync(k, async () => k.toUpperCase());
+        renders.push(`${k}:${r.status}`);
+        return r;
+      },
+      { initialProps: { k: 'a' } },
+    );
+    await waitFor(() => expect(renders).toContain('a:ready'));
+    renders.length = 0;
+    rerender({ k: 'b' });
+    expect(renders[0]).toBe('b:loading');
+  });
+
+  it('reports loading on the very next render after retry from an error', async () => {
+    const renders: string[] = [];
+    const { result } = renderHook(() => {
+      const r = useAsync('k', async () => {
+        throw new Error('fetch failed');
+      });
+      renders.push(r.status);
+      return r;
+    });
+    await waitFor(() => expect(result.current.status).toBe('error'));
+    renders.length = 0;
+    act(() => result.current.retry());
+    expect(renders[0]).toBe('loading');
+  });
 });
